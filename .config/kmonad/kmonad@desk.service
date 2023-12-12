@@ -1,0 +1,13 @@
+[Unit]
+Description=KMonad for generic keyboard
+StartLimitIntervalSec=1 min
+StartLimitBurst=3
+
+[Service]
+ExecStart=/usr/local/bin/kmonad /home/gustavo/.config/kmonad/%i.kbd
+Restart=always
+RestartSec=5
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target

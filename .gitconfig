@@ -1,16 +1,15 @@
 [user]
 	name = G M T Borges
-	email = contact@gmtborges.com
+	email = gustavo@gmtborges.com
 [alias]
 	st = status
 	lg = log  --graph --pretty=format:'%C(auto)%h -%C(auto)%d %s %C(green)(%cr) %C(blue)<%an>' --abbrev-commit --date=relative
 	lga = log --graph --pretty=format:'%C(auto)%h -%C(auto)%d %s %C(green)(%cr) %C(blue)<%an>' --abbrev-commit --date=relative --all
-  details = log -n1 -p --format=fuller
 	cm = commit -v
 	co = checkout
   sw = switch
   rs = restore
-  pl = pull --prune
+  pu = pull
   ps = push
 	br = branch
   dd = diff
@@ -45,3 +44,6 @@
 	defaultBranch = main
 [fetch]
 	prune = true
+
+[includeIf "gitdir:~/repos/saas/matt"]
+  path = .gitconfig-matt

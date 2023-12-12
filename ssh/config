@@ -1,18 +1,61 @@
-Host instagain
-  Hostname 44.214.1.223
-  User centos
+# vim:ft=conf
+Host private-apps
+  Hostname 3.144.174.21
+  User admin
+  IdentityFile ~/.ssh/gmtborges-ec2-key.pub
+  IdentitiesOnly yes
+
+Host gcloud-vm
+  Hostname 35.196.116.76
+  User gcloud
+  IdentityFile ~/.ssh/gcloud-key
+  IdentitiesOnly yes
 
 Host caninos
   Hostname 192.168.1.10
   User caninos
 
-Host db.qa.tipspace
-  Hostname 10.0.134.78
-  User ec2-user
+Host node1-staging
+  User admin
+  Hostname 18.188.157.9
 
-Host bucardo.tipspace
-  Hostname 10.10.8.192
-  User ec2-user
+Host node2-staging
+  User admin
+  Hostname 52.15.199.91
+
+Host node3-staging
+  User admin
+  Hostname 3.146.37.191
+
+Host node1
+  User admin
+  Hostname 18.231.172.115
+
+Host node2
+  User admin
+  Hostname 54.233.237.240
+
+Host node3
+  User admin
+  Hostname 18.231.48.118
+
+Host node4
+  User admin
+  Hostname 18.230.117.202
+
+Host node5
+  User admin
+  Hostname 54.94.102.66
+
+Host node6
+  User admin
+  Hostname 18.228.9.154
+
+Host saasgit
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/matt_ed25519
+  IdentitiesOnly yes
 
 Host *
-  IdentityAgent ~/.1password/agent.sock
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

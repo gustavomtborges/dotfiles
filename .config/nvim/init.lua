@@ -1,9 +1,6 @@
-require("plugins")
-require("options")
-require("keymaps")
-require("user.lsp")
-require("user.ui")
-require("user.editor")
-require("user.nvim-tree")
-require("user.treesitter")
-require("user.telekasten")
+require("user.options")
+require("user.keymaps")
+require("user.lazy")
+
+vim.opt.background = "dark"
+vim.cmd("colorscheme github_dark_dimmed")
