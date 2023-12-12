@@ -1,0 +1,338 @@
+{
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": false,
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": true,
+  "editor.wordWrap": "off",
+  "terminal.integrated.fontSize": 15,
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": false,
+  "sync.gist": "b76c405d071825185519de0cdeefef52",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.enablePreview": false,
+  "gitlens.mode.active": "zen",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "elixirLS.suggestSpecs": false,
+  "window.menuBarVisibility": "toggle",
+  "files.associations": {
+    "*.eex": "html-eex",
+    "*.leex": "html-eex"
+  },
+  "emmet.includeLanguages": {
+    "html-eex": "html"
+  },
+  "keyboard.dispatch": "keyCode",
+  "vim.hlsearch": true,
+  "vim.foldfix": true,
+  "vim.useCtrlKeys": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Buffers, files, commands keybinds
+    {
+      "before": ["<leader>", ":"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", ","],
+      "commands": ["workbench.action.showAllEditors"]
+    },
+    {
+      "before": ["<leader>", "b", "k"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "K"],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
+    {
+      "before": ["<leader>", "b", "n"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "p"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    // Git keybinds
+    {
+      "before": ["<leader>", "g", "r"],
+      "commands": ["git.revertSelectedRanges"]
+    },
+    {
+      "before": ["<leader>", "g", "["],
+      "commands": ["workbench.action.editor.previousChange"]
+    },
+    {
+      "before": ["<leader>", "g", "]"],
+      "commands": ["workbench.action.editor.nextChange"]
+    },
+    // Code keybinds
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "c", "o"],
+      "commands": ["editor.action.organizeImports"]
+    },
+    {
+      "before": ["<leader>", "c", "j"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<leader>", "c", "D"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "c", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    // Navigation keybinds
+    {
+      "before": ["]", "e"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["[", "e"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "b"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["[", "b"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["[", "j"],
+      "commands": ["workbench.action.navigateBackInNavigationLocations"]
+    },
+    {
+      "before": ["]", "j"],
+      "commands": ["workbench.action.navigateForwardInNavigationLocations"]
+    },
+    // Vim keybinds
+    {
+      "before": ["<leader>", "%"],
+      "commands": ["editor.emmet.action.matchTag"]
+    },
+    {
+      "before": ["<leader>", "t", "h"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<C-u>"],
+      "commands": ["cursorPageUp"]
+    },
+    {
+      "before": ["<C-d>"],
+      "commands": ["cursorPageDown"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["Y"],
+      "after": ["\"", "+", "y"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "editor.suggest.showStatusBar": true,
+  "explorer.confirmDelete": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "dart.debugSdkLibraries": false,
+  "dart.showMainCodeLens": false,
+  "dart.showTestCodeLens": false,
+  "debug.javascript.codelens.npmScripts": "never",
+  "workbench.colorCustomizations": {
+    "[Braver's Solarized Dark (themed workbench)]": {
+      "editorCursor.foreground": "#839495",
+      "dart.closingLabels": "#676f70"
+    },
+    "[Braver's Solarized Light (themed workbench)]": {
+      "dart.closingLabels": "#a0a391"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "[Braver's Solarized Dark (themed workbench)]": {
+      "textMateRules": [
+        {
+          "scope": ["meta.brace.square", "variable"],
+          "settings": {
+            "foreground": "#93a1a1"
+          }
+        },
+        {
+          "scope": ["entity.name.function", "meta.class"],
+          "settings": {
+            "foreground": "#268ad2"
+          }
+        },
+        {
+          "scope": [
+            "variable.language.this",
+            "support.class",
+            "variable.language.dart"
+          ],
+          "settings": {
+            "foreground": "#b58900"
+          }
+        },
+        {
+          "scope": ["constant.numeric"],
+          "settings": {
+            "foreground": "#d33582"
+          }
+        },
+        {
+          "scope": ["storage.type"],
+          "settings": {
+            "foreground": "#CB4B16"
+          }
+        },
+        {
+          "scope": ["constant.numeric"],
+          "settings": {
+            "foreground": "#2AA198"
+          }
+        },
+        {
+          "scope": [
+            "entity.name.function",
+            "keyword.control",
+            "comment",
+            "support.type.primitive",
+            "entity.name.type.ts"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    },
+    "[Braver's Solarized Light (themed workbench)]": {
+      "textMateRules": [
+        {
+          "scope": ["meta.brace.square", "variable"],
+          "settings": {
+            "foreground": "#657B83"
+          }
+        },
+        {
+          "scope": ["entity.name.function", "meta.class"],
+          "settings": {
+            "foreground": "#268ad2"
+          }
+        },
+        {
+          "scope": ["variable.language.this", "support.class"],
+          "settings": {
+            "foreground": "#b58900"
+          }
+        },
+        {
+          "scope": ["constant.numeric"],
+          "settings": {
+            "foreground": "#d33582"
+          }
+        },
+        {
+          "scope": ["storage.type"],
+          "settings": {
+            "foreground": "#CB4B16"
+          }
+        },
+        {
+          "scope": ["constant.numeric"],
+          "settings": {
+            "foreground": "#2AA198"
+          }
+        }
+      ]
+    },
+    "[Atom One Dark]": {
+      "textMateRules": [
+        {
+          "scope": "variable",
+          "settings": {
+            "foreground": "#ABB2BF"
+          }
+        },
+        {
+          "scope": "variable.language.this.ts",
+          "settings": {
+            "foreground": "#E06C75"
+          }
+        }
+      ]
+    },
+    "[Tokyo Night]": {
+      // or "[Tokyo Night Storm]"
+      "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "meta.var.expr storage.type",
+            "keyword.control.flow",
+            "keyword.control.return",
+            "meta.directive.vue punctuation.separator.key-value.html",
+            "meta.directive.vue entity.other.attribute-name.html",
+            "tag.decorator.js entity.name.tag.js",
+            "tag.decorator.js punctuation.definition.tag.js",
+            "storage.modifier"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
+  },
+  "redhat.telemetry.enabled": true,
+  "window.zoomLevel": 1,
+  "sync.removeExtensions": false,
+  "dart.debugExternalPackageLibraries": false,
+  "workbench.colorTheme": "Atom One Dark",
+  "angular.forceStrictTemplates": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "remote.SSH.defaultExtensions": ["gitpod.gitpod-remote-ssh"]
+}

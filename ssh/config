@@ -1,0 +1,18 @@
+Host instagain
+  Hostname 44.214.1.223
+  User centos
+
+Host caninos
+  Hostname 192.168.1.10
+  User caninos
+
+Host db.qa.tipspace
+  Hostname 10.0.134.78
+  User ec2-user
+
+Host bucardo.tipspace
+  Hostname 10.10.8.192
+  User ec2-user
+
+Host *
+  IdentityAgent ~/.1password/agent.sock

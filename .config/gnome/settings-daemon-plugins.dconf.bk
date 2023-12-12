@@ -1,0 +1,23 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+search=['<Super>space']
+
+[custom-keybindings/custom0]
+binding='<Super>F2'
+command='ddcutil setvcp 60 0x11'
+name='Switch HDMI'
+
+[custom-keybindings/custom1]
+binding='<Super>Return'
+command='kitty tmux'
+name='Open terminal'
+
+[custom-keybindings/custom2]
+binding='<Super>F3'
+command=' ddcutil setvcp 60 0x0f'
+name='Switch DisplayPort'
+
+[custom-keybindings/custom3]
+binding='<Super>F4'
+command='looking-glass-client win:size=2560x1440 -F -s'
+name='Open Looking Glass'

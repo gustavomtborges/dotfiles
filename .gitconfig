@@ -1,0 +1,47 @@
+[user]
+	name = G M T Borges
+	email = contact@gmtborges.com
+[alias]
+	st = status
+	lg = log  --graph --pretty=format:'%C(auto)%h -%C(auto)%d %s %C(green)(%cr) %C(blue)<%an>' --abbrev-commit --date=relative
+	lga = log --graph --pretty=format:'%C(auto)%h -%C(auto)%d %s %C(green)(%cr) %C(blue)<%an>' --abbrev-commit --date=relative --all
+  details = log -n1 -p --format=fuller
+	cm = commit -v
+	co = checkout
+  sw = switch
+  rs = restore
+  pl = pull --prune
+  ps = push
+	br = branch
+  dd = diff
+  dw = diff --word-diff
+  ds = diff --staged
+	rb = rebase
+  rbc = rebase --continue
+  rba = rebase --abort
+	mr = merge
+	mrc = merge --continue
+	mra = merge --abort
+[push]
+	default = simple
+[color]
+	ui = true
+[core]
+	editor = nvim
+	autocrlf = false
+	eof = lf
+[branch]
+	autosetuprebase = always
+[commit]
+	template = ~/.gitmessage
+	gpgsign = true
+[pull]
+	rebase = true
+[merge]
+	tool = vimdiff
+	ff = only
+	conflictstyle = diff3
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true

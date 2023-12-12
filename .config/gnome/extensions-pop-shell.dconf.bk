@@ -1,0 +1,10 @@
+[/]
+active-hint=true
+active-hint-border-radius=uint32 5
+gap-inner=uint32 2
+gap-outer=uint32 2
+hint-color-rgba='rgb(108,187,251)'
+tile-by-default=true
+tile-enter=@as []
+tile-orientation=['<Super>b']
+toggle-stacking-global=['<Super>w']
