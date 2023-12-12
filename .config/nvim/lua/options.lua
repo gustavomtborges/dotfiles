@@ -124,5 +124,5 @@ vim.g.everforest_background = "medium"
 vim.g.everforest_transparent_background = 1
 vim.g.edge_transparent_background = 1
 
-vim.opt.background = "light"
-vim.cmd("colorscheme dayfox")
+vim.opt.background = "dark"
+vim.cmd("colorscheme nightfox")
