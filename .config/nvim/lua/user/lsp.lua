@@ -4,7 +4,7 @@ local lspconfig = require("lspconfig")
 
 local elixirls = require("elixir.elixirls")
 require("elixir").setup({
-  nextls = { enable = false },
+  nextls = { enable = true },
   credo = { enable = false },
   elixirls = {
     settings = elixirls.settings({
