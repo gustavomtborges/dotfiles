@@ -115,6 +115,12 @@ wk.register({
       end,
       "Find files (.gitignore)",
     },
+    t = {
+      function()
+        require("telescope.builtin").grep_string()
+      end,
+      "Find word under cursor"
+    }
   },
   c = {
     name = "+code [LSP]",
