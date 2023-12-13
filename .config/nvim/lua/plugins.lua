@@ -60,6 +60,7 @@ return require("packer").startup(function(use)
 	use("sainnhe/sonokai")
 	use("maxmx03/solarized.nvim")
 	use("Mofiqul/vscode.nvim")
+	use({ "rose-pine/neovim", as = "rose-pine" })
 
 	-- Language support
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
