@@ -82,6 +82,7 @@ plugins=(
 	zsh-autosuggestions 
 	zsh-syntax-highlighting 
 	asdf
+  aws
 )
 
 source $ZSH/oh-my-zsh.sh

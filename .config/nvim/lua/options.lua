@@ -26,7 +26,7 @@ vim.opt.signcolumn = "yes"
 
 -- witch-key settings
 vim.opt.timeout = true
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 500
 
 --vim.opt.clipboard = "unnamed" -- Copy and paste with OS clipboard
 vim.opt.cursorline = true -- Highlight the current line
@@ -84,6 +84,12 @@ require("nightfox").setup({
 			sel0 = "#3e4a5b", -- Popup bg, visual selection bg
 			sel1 = "#4f6074", -- Popup sel bg, search bg
 		},
+		dayfox = {
+			bg2 = "#E0D6C5", -- Lighter bg (colorcolm folds)
+			bg3 = "#E0D6C5", -- Lighter bg (cursor line)
+			sel0 = "#D4CDBA", -- Popup bg, visual selection bg
+			sel1 = "#DBC3BD", -- Popup sel bg, search bg
+		},
 	},
 })
 
@@ -117,5 +123,5 @@ vim.g.everforest_background = "medium"
 vim.g.everforest_transparent_background = 1
 vim.g.edge_transparent_background = 1
 
-vim.opt.background = "dark"
-vim.cmd("colorscheme nightfox")
+vim.opt.background = "light"
+vim.cmd("colorscheme dayfox")

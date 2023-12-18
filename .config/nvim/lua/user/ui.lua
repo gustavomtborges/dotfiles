@@ -8,11 +8,11 @@ require("colorizer").setup()
 local telescope = require("telescope")
 telescope.load_extension("fzf")
 telescope.setup({
-  pickers = {
-    oldfiles = {
-      cwd_only = true
-    }
-  }
+	pickers = {
+		oldfiles = {
+			cwd_only = true,
+		},
+	},
 })
 
 vim.opt.list = false
@@ -36,6 +36,7 @@ end)
 require("ibl").setup({
 	exclude = { filetypes = { "dashboard" } },
 	scope = { enabled = false },
+	indent = { highlight = solarized_highlight },
 })
 
 local function list_registered_providers_names(filetype)
