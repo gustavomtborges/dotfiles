@@ -50,17 +50,14 @@ return require("packer").startup(function(use)
 	-- Colorschemes
 	use("navarasu/onedark.nvim")
 	use("folke/tokyonight.nvim")
-	use("ellisonleao/gruvbox.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("sainnhe/everforest")
 	use("projekt0n/github-nvim-theme")
 	use("EdenEast/nightfox.nvim")
 	use("sainnhe/edge")
-	use("Mofiqul/adwaita.nvim")
 	use("sainnhe/sonokai")
 	use("maxmx03/solarized.nvim")
 	use("Mofiqul/vscode.nvim")
-	use({ "rose-pine/neovim", as = "rose-pine" })
 
 	-- Language support
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
