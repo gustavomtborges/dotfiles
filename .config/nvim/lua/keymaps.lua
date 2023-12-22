@@ -90,6 +90,10 @@ wk.register({
 		end,
 		"Next git change",
 	},
+	R = {
+		"*``cgn",
+		"Replace word",
+	},
 	f = {
 		name = "+file",
 		w = {

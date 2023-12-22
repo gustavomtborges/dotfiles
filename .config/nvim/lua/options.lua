@@ -53,7 +53,6 @@ vim.api.nvim_create_autocmd("BufRead", {
 require("tokyonight").setup({
 	transparent = true,
 	styles = {
-		keywords = { bold = true },
 		floats = "transparent",
 		sidebars = "transparent",
 	},
@@ -62,20 +61,12 @@ require("tokyonight").setup({
 require("github-theme").setup({
 	options = {
 		transparent = true,
-		styles = {
-			keywords = "bold",
-			types = "bold",
-		},
 	},
 })
 
 require("nightfox").setup({
 	options = {
 		transparent = true,
-		styles = {
-			keywords = "bold",
-			types = "bold",
-		},
 	},
 	palettes = {
 		nightfox = {
@@ -95,9 +86,6 @@ require("nightfox").setup({
 
 require("onedark").setup({
 	transparent = true,
-	code_style = {
-		keywords = "bold",
-	},
 })
 
 require("solarized").setup({
@@ -112,5 +100,16 @@ vim.g.everforest_background = "medium"
 vim.g.everforest_transparent_background = 1
 vim.g.edge_transparent_background = 1
 
+local c = require("vscode.colors").get_colors()
+require("vscode").setup({
+	transparent = true,
+	disable_nvimtree_bg = true,
+	group_overrides = {
+		["@keyword"] = { fg = c.vscBlue, bg = "none", bold = true },
+	},
+})
+require("vscode").load()
+
+-- Set colorscheme
 vim.opt.background = "dark"
-vim.cmd("colorscheme solarized")
+vim.cmd("colorscheme vscode")

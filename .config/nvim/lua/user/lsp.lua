@@ -4,87 +4,87 @@ local lspconfig = require("lspconfig")
 
 local elixirls = require("elixir.elixirls")
 require("elixir").setup({
-  nextls = { enable = true },
-  credo = { enable = false },
-  elixirls = {
-    settings = elixirls.settings({
-      dialyzerEnabled = false,
-      enableTestLenses = false,
-    }),
-  },
+	nextls = { enable = false },
+	credo = { enable = false },
+	elixirls = {
+		settings = elixirls.settings({
+			dialyzerEnabled = false,
+			enableTestLenses = false,
+		}),
+	},
 })
 
 lspconfig.lua_ls.setup({
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = "LuaJIT",
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { "vim" },
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false,
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
+	settings = {
+		Lua = {
+			runtime = {
+				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+				version = "LuaJIT",
+			},
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = { "vim" },
+			},
+			workspace = {
+				-- Make the server aware of Neovim runtime files
+				library = vim.api.nvim_get_runtime_file("", true),
+				checkThirdParty = false,
+			},
+			-- Do not send telemetry data containing a randomized but unique identifier
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
 })
 
 lspconfig.cssls.setup({
-  settings = {
-    scss = {
-      lint = {
-        idSelector = "warning",
-        zeroUnits = "warning",
-        duplicateProperties = "warning",
-      },
-      completion = {
-        completePropertyWithSemicolon = true,
-        triggerPropertyValueCompletion = true,
-      },
-    },
-  },
-  capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	settings = {
+		scss = {
+			lint = {
+				idSelector = "warning",
+				zeroUnits = "warning",
+				duplicateProperties = "warning",
+			},
+			completion = {
+				completePropertyWithSemicolon = true,
+				triggerPropertyValueCompletion = true,
+			},
+		},
+	},
+	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
 
 lspconfig.tsserver.setup({
-  capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
 
 lspconfig.html.setup({
-  capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
 
 lspconfig.angularls.setup({
-  capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
 
 lspconfig.jsonls.setup({
-  settings = {
-    json = {
-      schemas = require("schemastore").json.schemas(),
-    },
-  },
-  capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	settings = {
+		json = {
+			schemas = require("schemastore").json.schemas(),
+		},
+	},
+	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
 
 lspconfig.tailwindcss.setup({
-  filetypes = { "html", "heex", "elixir", "astro" },
-  init_options = {
-    userLanguages = {
-      elixir = "html-eex",
-      eelixir = "html-eex",
-      heex = "html-eex",
-    },
-  },
+	filetypes = { "html", "heex", "elixir", "astro" },
+	init_options = {
+		userLanguages = {
+			elixir = "html-eex",
+			eelixir = "html-eex",
+			heex = "html-eex",
+		},
+	},
 })
 
 lspconfig.dockerls.setup({})
@@ -99,7 +99,7 @@ lspconfig.astro.setup({})
 -- })
 lspconfig.ansiblels.setup({})
 lspconfig.terraformls.setup({
-  filetypes = { "terraform", "tf", "terraformvars", "tfvars" },
+	filetypes = { "terraform", "tf", "terraformvars", "tfvars" },
 })
 lspconfig.gopls.setup({})
 -- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
@@ -113,48 +113,48 @@ local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local format_on_save = function(client, bufnr)
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = augroup,
-      buffer = bufnr,
-      callback = function()
-        vim.lsp.buf.format({
-          bufnr = bufnr,
-          -- filter = function(c)
-          -- 	return c.name == "null-ls"
-          -- end,
-        })
-      end,
-    })
-  end
+	if client.server_capabilities.documentFormattingProvider then
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
+			callback = function()
+				vim.lsp.buf.format({
+					bufnr = bufnr,
+					-- filter = function(c)
+					-- 	return c.name == "null-ls"
+					-- end,
+				})
+			end,
+		})
+	end
 end
 
 null_ls.setup({
-  sources = {
-    null_ls.builtins.completion.spell,
-    null_ls.builtins.formatting.stylua,
-    null_ls.builtins.formatting.xmllint,
-    null_ls.builtins.formatting.prettierd.with({
-      extra_filetypes = {
-        "telekasten",
-        "txt",
-        "config",
-        "astro",
-      },
-    }),
-    null_ls.builtins.formatting.rubyfmt,
-    null_ls.builtins.formatting.terraform_fmt,
-    null_ls.builtins.diagnostics.jsonlint,
-    null_ls.builtins.diagnostics.golangci_lint,
-  },
-  on_attach = format_on_save,
+	sources = {
+		null_ls.builtins.completion.spell,
+		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.xmllint,
+		null_ls.builtins.formatting.prettierd.with({
+			extra_filetypes = {
+				"telekasten",
+				"txt",
+				"config",
+				"astro",
+			},
+		}),
+		null_ls.builtins.formatting.rubyfmt,
+		null_ls.builtins.formatting.terraform_fmt,
+		null_ls.builtins.diagnostics.jsonlint,
+		null_ls.builtins.diagnostics.golangci_lint,
+	},
+	on_attach = format_on_save,
 })
 
 vim.filetype.add({
-  extension = {
-    mdx = "mdx",
-  },
+	extension = {
+		mdx = "mdx",
+	},
 })
 
 vim.treesitter.language.register("typescript", "mdx")
