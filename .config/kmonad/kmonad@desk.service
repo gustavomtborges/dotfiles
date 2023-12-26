@@ -1,5 +1,5 @@
 [Unit]
-Description=KMonad for Acer laptop keyboard
+Description=KMonad for generic keyboard
 StartLimitIntervalSec=1 min
 StartLimitBurst=3
 

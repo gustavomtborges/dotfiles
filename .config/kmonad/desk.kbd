@@ -1,6 +1,6 @@
 (defcfg
   ;; For Linux
-  input  (device-file "/dev/input/event0")
+  input  (device-file "/dev/input/event4")
   output (uinput-sink "My KMonad output")
 
   ;; For Windows
@@ -39,6 +39,8 @@
 
     num (layer-toggle numbers)
     sym (layer-toggle symbols)
+    game (layer-switch game)
+    work (layer-switch base)
 )
 
 (deflayer base
@@ -48,9 +50,16 @@
   _ _  @num           _            @sym
 )
 
+(deflayer game
+  tab  q    w    e    r    t    y    u    i    o    p  bspc
+  caps a    s    d    f    g    h    j    k    l    ;  '
+  lsft z    x    c    v    b    n    m    ,    .    /
+  lctl lmet (around g @work)           spc            ralt
+)
+
 (deflayer numbers
   _  1    2    3    4    5    6    7   8   9    0  _
-  _  _  _  _  _  _  left   down   up   right   _  _
+  _  _  _  _  _  @game  left   down   up   right   _  _
   _  _  _  _  _  _  end    pagedown    pageup    home   _
   _ _ _            _            (around @sym (layer-toggle func))
 )
