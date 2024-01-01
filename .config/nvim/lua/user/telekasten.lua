@@ -13,7 +13,7 @@ require("telekasten").setup({
 
 	-- auto-set telekasten filetype: if false, the telekasten filetype will not be used
 	--                               and thus the telekasten syntax will not be loaded either
-	auto_set_filetype = false,
+	auto_set_filetype = true,
 
 	-- dir names for special notes (absolute path or subdir name)
 	-- dailies = home .. "/" .. "daily",
@@ -147,8 +147,8 @@ require("telekasten").setup({
 })
 
 vim.cmd([[hi tkHighlight ctermbg=yellow ctermfg=darkred cterm=bold guibg=yellow guifg=darkred gui=bold ]])
-vim.cmd([[hi tkLink ctermfg=72 guifg=#73daca cterm=bold,underline gui=bold,underline ]])
-vim.cmd([[hi tkBrackets ctermfg=gray guifg=#73daca ]])
-vim.cmd([[hi tkTag ctermfg=72 guifg=#ff007c ]])
+vim.cmd([[hi tkLink ctermfg=72 guifg=#61AFEF cterm=bold,underline gui=bold,underline ]])
+vim.cmd([[hi tkBrackets ctermfg=gray guifg=#61AFEF ]])
+vim.cmd([[hi tkTag ctermfg=72 guifg=#C678DD ]])
 
 vim.g.mkdp_auto_close = 0

@@ -17,18 +17,14 @@ keymap("n", "<C-s>", ":<c-u>update<CR>", default_opts)
 keymap("v", "<C-s>", ":<c-c>update<CR>gv", default_opts)
 keymap("i", "<C-s>", ":<c-o>update<CR>", default_opts)
 
--- Replace current word
-keymap("n", "<leader>r", "*``cgn", default_opts)
-keymap("n", "<leader>R", "#``cgN", default_opts)
-
 -- Move esasly between splits
-keymap("n", "<C-j>", "<C-w><C-j>", default_opts)
-keymap("n", "<C-k>", "<C-w><C-k>", default_opts)
-keymap("n", "<C-l>", "<C-w><C-l>", default_opts)
-keymap("n", "<C-h>", "<C-w><C-h>", default_opts)
+-- keymap("n", "<C-j>", "<C-w><C-j>", default_opts)
+-- keymap("n", "<C-k>", "<C-w><C-k>", default_opts)
+-- keymap("n", "<C-l>", "<C-w><C-l>", default_opts)
+-- keymap("n", "<C-h>", "<C-w><C-h>", default_opts)
 
 -- Copy to clipboard
-keymap("v", "Y", '"+y', default_opts)
+keymap("v", "<C-y>", '"+y', default_opts)
 
 local wk = require("which-key")
 wk.setup({
@@ -356,12 +352,6 @@ wk.register({
 			end,
 			"Find notes",
 		},
-		s = {
-			function()
-				require("telekasten").search_notes()
-			end,
-			"Search in notes",
-		},
 		n = {
 			function()
 				require("telekasten").new_note()
@@ -391,6 +381,18 @@ wk.register({
 				require("telekasten").rename_note()
 			end,
 			"Rename note",
+		},
+		d = {
+			function()
+				require("telekasten").goto_today()
+			end,
+			"Go to today",
+		},
+		w = {
+			function()
+				require("telekasten").goto_thisweek()
+			end,
+			"Go to this week",
 		},
 	},
 }, { prefix = "<leader>" })
