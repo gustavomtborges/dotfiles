@@ -53,8 +53,7 @@ vim.api.nvim_create_autocmd("BufRead", {
 require("tokyonight").setup({
 	transparent = true,
 	styles = {
-		floats = "transparent",
-		sidebars = "transparent",
+		keywords = "bold",
 	},
 })
 
@@ -86,12 +85,22 @@ require("nightfox").setup({
 
 require("onedark").setup({
 	transparent = true,
+	code_style = {
+		keywords = "bold",
+	},
 })
 
 require("solarized").setup({
 	transparent = true,
 	styles = {
 		keywords = { bold = true },
+	},
+})
+
+require("catppuccin").setup({
+	transparent_background = true,
+	styles = {
+		keywords = { "bold" },
 	},
 })
 
