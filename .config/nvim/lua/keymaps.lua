@@ -24,7 +24,7 @@ keymap("i", "<C-s>", ":<c-o>update<CR>", default_opts)
 -- keymap("n", "<C-h>", "<C-w><C-h>", default_opts)
 
 -- Copy to clipboard
-keymap("v", "<C-y>", '"+y', default_opts)
+keymap("v", "Y", '"+y', default_opts)
 
 local wk = require("which-key")
 wk.setup({
@@ -112,9 +112,9 @@ wk.register({
 		},
 		f = {
 			function()
-				require("telescope.builtin").find_files({ previewer = false, hidden = true, no_ignore = true })
+				require("telescope.builtin").find_files({ previewer = false, hidden = true })
 			end,
-			"Find files (.gitignore)",
+			"Find files (.hidden)",
 		},
 		t = {
 			function()
@@ -305,10 +305,6 @@ wk.register({
 			":set spell!<CR>",
 			"Spell checking",
 		},
-		m = {
-			":MarkdownPreview<CR>",
-			"Markdown Preview",
-		},
 	},
 	b = {
 		name = "+buffers",
@@ -393,6 +389,12 @@ wk.register({
 				require("telekasten").goto_thisweek()
 			end,
 			"Go to this week",
+		},
+		c = {
+			function()
+				require("telekasten").show_calendar()
+			end,
+			"Show calendar",
 		},
 	},
 }, { prefix = "<leader>" })

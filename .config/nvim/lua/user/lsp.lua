@@ -77,7 +77,7 @@ lspconfig.jsonls.setup({
 })
 
 lspconfig.tailwindcss.setup({
-	filetypes = { "html", "heex", "elixir", "astro" },
+	filetypes = { "html", "heex", "elixir", "astro", "cshtml" },
 	init_options = {
 		userLanguages = {
 			elixir = "html-eex",
@@ -102,6 +102,8 @@ lspconfig.terraformls.setup({
 	filetypes = { "terraform", "tf", "terraformvars", "tfvars" },
 })
 lspconfig.gopls.setup({})
+lspconfig.omnisharp.setup({})
+
 -- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 -- 	pattern = { "*.tf", "*.tfvars" },
 -- 	callback = function()

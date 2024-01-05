@@ -79,7 +79,6 @@ return require("packer").startup(function(use)
 		"kylechui/nvim-surround",
 		tag = "*",
 	})
-	use("tpope/vim-fugitive")
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-ts-autotag")
@@ -111,11 +110,9 @@ return require("packer").startup(function(use)
 	use("renerocksai/calendar-vim")
 	use({
 		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
+		run = function()
+			vim.fn["mkdp#util#install"]()
 		end,
-		ft = { "markdown" },
 	})
 	use("nvim-telescope/telescope-media-files.nvim")
 

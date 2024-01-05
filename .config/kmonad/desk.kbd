@@ -1,6 +1,6 @@
 (defcfg
   ;; For Linux
-  input  (device-file "/dev/input/event4")
+  input  (device-file "/dev/input/by-id/usb-ROYUAN_Akko_Multi-modes_Keyboard-B-event-kbd")
   output (uinput-sink "My KMonad output")
 
   ;; For Windows
@@ -40,7 +40,8 @@
     num (layer-toggle numbers)
     sym (layer-toggle symbols)
     game (layer-switch game)
-    work (around / (layer-switch base))
+    work (around g (layer-switch base))
+    numg (layer-toggle numgames)
 )
 
 (deflayer base
@@ -52,9 +53,9 @@
 
 (deflayer game
   tab  q    w    e    r    t    y    u    i    o    p  bspc
-  caps a    s    d    f    g    h    j    k    l    ;  '
+  @esc_ralt a    s    d    f    g    h    j    k    l    ;  '
   lsft z    x    c    v    b    n    m    ,    .    /
-  lctl lmet @work           spc            ralt
+  lctl lmet @numg           spc            _
 )
 
 (deflayer numbers
@@ -64,16 +65,23 @@
   _ _ _            _            (around @sym (layer-toggle func))
 )
 
+(deflayer numgames
+  _  1    2    3    4    5    6    7   8   9    0  _
+  _  _  _  _  _  _  left   down   up   right   _  _
+  _  _  _  _  _  _  home  pageup  pagedown  end  _
+  _ _ _            _            @work
+)
+
 (deflayer symbols
   _  !    @    #    $    %    ^    &   *   \(    \)  _
-  ~  _  prnt  _  _  _  -   =   [   ]   \   `
-  _  _  _  _  _  _  \_  +   {   }   |
+  ~  _  _  _  _  _  -   =   [   ]   \   `
+  _  _  _  _  _  _  _  _   _   _   @game
   _ _  (around @num (layer-toggle func))           _            _
 )
 
 (deflayer func
   _  f1    f2    f3    f4    f5    f6    f7   f8   f9    f10  _
-  ~  _  _  _  _  _  _   _   f11   f12   _   _
+  ~  _  prnt  _  _  @game  _   _   f11   f12   _   _
   _  _  _  _  _  _  _  _   _   _   _
   _ _ _           _            _
 )

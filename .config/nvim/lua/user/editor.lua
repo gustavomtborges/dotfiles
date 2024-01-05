@@ -5,13 +5,23 @@ require("nvim-ts-autotag").setup({
 	filetypes = { "html", "heex", "astro" },
 })
 
+require("lspsaga").setup({
+	ui = {
+		code_action = " ",
+	},
+	symbol_in_winbar = {
+		enable = false,
+		color_mode = false,
+	},
+})
+
 require("git-conflict").setup({
 	default_mappings = {
 		next = "]x",
 		prev = "[x",
 	},
 })
-require("gitsigns").setup()
+
 require("nvim-surround").setup()
 
 -- nvim-cmp setup
