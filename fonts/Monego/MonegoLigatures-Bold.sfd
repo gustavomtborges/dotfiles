@@ -5087,21 +5087,6 @@ SplineSet
  1170.4765625 1597 l 1
  311.151367188 -235 l 1
 EndSplineSet
-Substitution2: "Single Substitution lookup 451 subtable" lig.9
-Substitution2: "Single Substitution lookup 448 subtable" lig.10
-Substitution2: "Single Substitution lookup 334 subtable" lig.48
-Substitution2: "Single Substitution lookup 272 subtable" CR.69.0
-Substitution2: "Single Substitution lookup 269 subtable" CR.70.0
-Substitution2: "Single Substitution lookup 266 subtable" CR.71.0
-Substitution2: "Single Substitution lookup 263 subtable" CR.72.0
-Substitution2: "Single Substitution lookup 260 subtable" CR.73.0
-Substitution2: "Single Substitution lookup 259 subtable" lig.73
-Substitution2: "Single Substitution lookup 193 subtable" CR.90.1
-Substitution2: "Single Substitution lookup 73 subtable" CR.120.1
-Substitution2: "Single Substitution lookup 46 subtable" CR.127.0
-Substitution2: "Single Substitution lookup 42 subtable" CR.128.0
-Substitution2: "Single Substitution lookup 41 subtable" CR.128.1
-Substitution2: "Single Substitution lookup 40 subtable" lig.128
 EndChar
 
 StartChar: zero
@@ -6676,8 +6661,6 @@ SplineSet
  917.848632812 -235 l 1
  58.5234375 1597 l 1
 EndSplineSet
-Substitution2: "Single Substitution lookup 449 subtable" CR.10.0
-Substitution2: "Single Substitution lookup 268 subtable" lig.70
 EndChar
 
 StartChar: bracketright
