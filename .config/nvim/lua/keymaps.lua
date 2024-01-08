@@ -34,6 +34,71 @@ wk.setup({
 })
 
 wk.register({
+	["<C-p>"] = {
+		function()
+			require("telescope.builtin").find_files({ previewer = false })
+		end,
+		"Find File",
+	},
+	["<C-j>"] = {
+		":BufferLineCyclePrev<CR>",
+		"Previous buffer",
+	},
+	["<C-k>"] = {
+		":BufferLineCycleNext<CR>",
+		"Next buffer",
+	},
+	["<C-l>"] = {
+		function()
+			require("telescope.builtin").buffers({
+				sort_mru = true,
+				ignore_current_buffer = true,
+				previewer = false,
+			})
+		end,
+		"Opened buffers",
+	},
+	["<C-q>"] = {
+		":Bdelete<CR>",
+		"Close buffer",
+	},
+	["<C-S-q>"] = {
+		":q<CR>",
+		"Quit",
+	},
+})
+
+wk.register({
+	c = {
+		function()
+			require("gitsigns").prev_hunk({ buffer = true })
+		end,
+		"Previous change",
+	},
+	d = {
+		function()
+			vim.diagnostic.goto_prev()
+		end,
+		"Previous diagnostic",
+	},
+}, { prefix = "[" })
+
+wk.register({
+	c = {
+		function()
+			require("gitsigns").next_hunk({ buffer = true })
+		end,
+		"Next change",
+	},
+	d = {
+		function()
+			vim.diagnostic.goto_next()
+		end,
+		"Next diagnostic",
+	},
+}, { prefix = "]" })
+
+wk.register({
 	p = {
 		function()
 			require("telescope.builtin").find_files({ previewer = false })
@@ -52,7 +117,7 @@ wk.register({
 		":BufferLineCycleNext<CR>",
 		"Next buffer",
 	},
-	[";"] = {
+	["l"] = {
 		function()
 			require("telescope.builtin").buffers({
 				sort_mru = true,
@@ -62,33 +127,13 @@ wk.register({
 		end,
 		"Opened buffers",
 	},
-	u = {
-		function()
-			vim.diagnostic.goto_prev()
-		end,
-		"Previous diagnostic",
-	},
-	i = {
-		function()
-			vim.diagnostic.goto_next()
-		end,
-		"Next diagnostic",
-	},
-	e = {
-		function()
-			require("gitsigns").prev_hunk({ buffer = true })
-		end,
-		"Previous git change",
+	R = {
+		"#``cgN",
+		"Replace word backward",
 	},
 	r = {
-		function()
-			require("gitsigns").next_hunk({ buffer = true })
-		end,
-		"Next git change",
-	},
-	R = {
 		"*``cgn",
-		"Replace word",
+		"Replace word forward",
 	},
 	f = {
 		name = "+file",

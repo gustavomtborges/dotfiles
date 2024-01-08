@@ -66,6 +66,9 @@ require("github-theme").setup({
 require("nightfox").setup({
   options = {
     transparent = true,
+    styles = {
+      keywords = "bold",
+    },
   },
   palettes = {
     nightfox = {
@@ -75,10 +78,10 @@ require("nightfox").setup({
       sel1 = "#4f6074", -- Popup sel bg, search bg
     },
     dayfox = {
-      bg2 = "#E0D6C5", -- Lighter bg (colorcolm folds)
-      bg3 = "#E0D6C5", -- Lighter bg (cursor line)
-      sel0 = "#D4CDBA", -- Popup bg, visual selection bg
-      sel1 = "#DBC3BD", -- Popup sel bg, search bg
+      bg2 = "#DCE4E2", -- Lighter bg (colorcolm folds)
+      bg3 = "#DCE4E2", -- Lighter bg (cursor line)
+      sel0 = "#CACFC8", -- Popup bg, visual selection bg
+      sel1 = "#CACFC8", -- Popup sel bg, search bg
     },
   },
 })
