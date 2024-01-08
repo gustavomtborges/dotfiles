@@ -64,396 +64,357 @@ wk.register({
 	},
 	["<C-S-q>"] = {
 		":q<CR>",
-		"Quit",
+		"Close pane",
 	},
-})
-
-wk.register({
-	c = {
+	["[c"] = {
 		function()
 			require("gitsigns").prev_hunk({ buffer = true })
 		end,
 		"Previous change",
 	},
-	d = {
+	["[d"] = {
 		function()
 			vim.diagnostic.goto_prev()
 		end,
 		"Previous diagnostic",
 	},
-}, { prefix = "[" })
-
-wk.register({
-	c = {
+	["]c"] = {
 		function()
-			require("gitsigns").next_hunk({ buffer = true })
+			require("gitsigns").prev_hunk({ buffer = true })
 		end,
-		"Next change",
+		"Previous change",
 	},
-	d = {
+	["]d"] = {
 		function()
-			vim.diagnostic.goto_next()
+			vim.diagnostic.goto_prev()
 		end,
-		"Next diagnostic",
+		"Previous diagnostic",
 	},
-}, { prefix = "]" })
-
-wk.register({
-	p = {
+	["<leader>p"] = {
 		function()
 			require("telescope.builtin").find_files({ previewer = false })
 		end,
 		"Find File",
 	},
-	q = {
+	["<leader>R"] = {
+		"*``cgn",
+		"Replace word forward",
+	},
+	["<leader>f"] = {
+		name = "+file",
+	},
+	["<leader>fw"] = {
+		function()
+			require("telescope.builtin").live_grep()
+		end,
+		"Find word",
+	},
+	["<leader>fm"] = {
+		function()
+			require("telescope.builtin").marks()
+		end,
+		"Find bookmarks",
+	},
+	["<leader>fr"] = {
+		function()
+			require("telescope.builtin").oldfiles()
+		end,
+		"Find recent files",
+	},
+	["<leader>ff"] = {
+		function()
+			require("telescope.builtin").find_files({ previewer = false, hidden = true })
+		end,
+		"Find files (.hidden)",
+	},
+	["<leader>fc"] = {
+		function()
+			require("telescope.builtin").grep_string()
+		end,
+		"Find word under cursor",
+	},
+	["<leader>c"] = { name = "+code [LSP]" },
+	["gd"] = {
+		function()
+			vim.lsp.buf.definition()
+		end,
+		"Go to definition",
+	},
+	["gD"] = {
+		function()
+			vim.lsp.buf.declaration()
+		end,
+		"Go to declaration",
+	},
+	["gr"] = {
+		function()
+			vim.lsp.buf.references()
+		end,
+		"Go to references",
+	},
+	["<leader>ci"] = {
+		function()
+			require("telescope.builtin").lsp_implementations()
+		end,
+		"Go to implementation",
+	},
+	["<leader>r"] = { name = "rename" },
+	["<leader>rn"] = {
+		function()
+			vim.lsp.buf.rename()
+		end,
+		"",
+	},
+	["H"] = {
+		function()
+			vim.lsp.buf.hover()
+		end,
+		"Preview docs",
+	},
+	["<C-h>"] = {
+		function()
+			vim.lsp.buf.signature_help()
+		end,
+		"Preview signature",
+	},
+	["<leader>ca"] = {
+		"<cmd>Lspsaga code_action<CR>",
+		"Code actions",
+	},
+	["<leader>cj"] = {
+		function()
+			require("telescope.builtin").lsp_document_symbols()
+		end,
+		"Jump to symbol",
+	},
+	["<leader>cf"] = {
+		function()
+			vim.lsp.buf.format({ buffer = true, async = true })
+		end,
+		"Format buffer",
+	},
+	["<leader>g"] = { name = "+git" },
+	["<leader>gs"] = {
+		function()
+			require("telescope.builtin").git_status()
+		end,
+		"List git changes",
+	},
+	["<leader>gb"] = {
+		function()
+			require("telescope.builtin").git_branches()
+		end,
+		"List git branches",
+	},
+	["<leader>gc"] = {
+		function()
+			require("telescope.builtin").git_commits()
+		end,
+		"List commits",
+	},
+	["<leader>gh"] = {
+		function()
+			require("telescope.builtin").git_bcommits()
+		end,
+		"Show file history",
+	},
+	["<leader>gx"] = {
+		":GitConflictListQf<CR>",
+		"Comflict files",
+	},
+	["<leader>ga"] = {
+		":Gitsigns stage_hunk<CR>",
+		"Stage hunk",
+	},
+	["<leader>gr"] = {
+		":Gitsigns reset_hunk<CR>",
+		"Restore hunk",
+	},
+	["<leader>gA"] = {
+		function()
+			require("gitsigns").stage_buffer()
+		end,
+		"Stage buffer",
+	},
+	["<leader>gR"] = {
+		function()
+			require("gitsigns").reset_buffer()
+		end,
+		"Restore buffer",
+	},
+	["<leader>gp"] = {
+		function()
+			require("gitsigns").preview_hunk()
+		end,
+		"Preview hunk",
+	},
+	["<leader>gl"] = {
+		function()
+			require("gitsigns").toggle_current_line_blame()
+		end,
+		"Blame",
+	},
+	["<leader>gd"] = {
+		function()
+			require("gitsigns").diffthis()
+		end,
+		"Diff",
+	},
+	["<leader>gD"] = {
+		function()
+			require("gitsigns").diffthis("~")
+		end,
+		"Diff buffer",
+	},
+	["<leader>o"] = {
+		name = "+open",
+	},
+	["<leader>oe"] = {
+		":NvimTreeToggle<CR>",
+		"Project explorer",
+	},
+	["<leader>os"] = {
+		":SymbolsOutline<CR>",
+		"Symbols outline",
+	},
+	["<leader>od"] = {
+		":TroubleToggle<CR>",
+		"Diagnostic",
+	},
+	["<leader>oD"] = {
+		":TroubleToggle workspace_diagnostics<CR>",
+		"Diagnostic Workspace",
+	},
+	["<leader>oq"] = {
+		":copen<CR>",
+		"Quickfix",
+	},
+	["<leader>om"] = {
+		":MarkdownPreview<CR>",
+		"Markdown Preview",
+	},
+	["<leader>t"] = {
+		name = "+toggle",
+	},
+	["<leader>th"] = {
+		":nohl<CR>",
+		"Search highligh",
+	},
+	["<leader>tw"] = {
+		":set wrap!<CR>",
+		"Word wrap",
+	},
+	["<leader>tc"] = {
+		":set list!<CR>",
+		"Hidden chars",
+	},
+	["<leader>ts"] = {
+		":set spell!<CR>",
+		"Spell checking",
+	},
+	["<leader>b"] = {
+		name = "+buffers",
+	},
+	["<leader>bk"] = {
 		":Bdelete<CR>",
 		"Close buffer",
 	},
-	j = {
-		":BufferLineCyclePrev<CR>",
-		"Previous buffer",
+	["<leader>bK"] = {
+		":%Bdelete<CR>",
+		"Close all buffers",
 	},
-	k = {
-		":BufferLineCycleNext<CR>",
-		"Next buffer",
-	},
-	["l"] = {
+	["<leader>bl"] = {
 		function()
 			require("telescope.builtin").buffers({
 				sort_mru = true,
 				ignore_current_buffer = true,
-				previewer = false,
 			})
 		end,
 		"Opened buffers",
 	},
-	R = {
-		"#``cgN",
-		"Replace word backward",
+	["<leader>b>"] = {
+		":BufferLineMoveNext<CR>",
+		"Move Next",
 	},
-	r = {
-		"*``cgn",
-		"Replace word forward",
+	["<leader>b<"] = {
+		":BufferLineMovePrev<CR>",
+		"Move Previous",
 	},
-	f = {
-		name = "+file",
-		w = {
-			function()
-				require("telescope.builtin").live_grep()
-			end,
-			"Find word",
-		},
-		m = {
-			function()
-				require("telescope.builtin").marks()
-			end,
-			"Find bookmarks",
-		},
-		r = {
-			function()
-				require("telescope.builtin").oldfiles()
-			end,
-			"Find recent files",
-		},
-		f = {
-			function()
-				require("telescope.builtin").find_files({ previewer = false, hidden = true })
-			end,
-			"Find files (.hidden)",
-		},
-		t = {
-			function()
-				require("telescope.builtin").grep_string()
-			end,
-			"Find word under cursor",
-		},
-	},
-	c = {
-		name = "+code [LSP]",
-		d = {
-			function()
-				require("telescope.builtin").lsp_definitions()
-			end,
-			"Go to definition",
-		},
-		D = {
-			function()
-				require("telescope.builtin").lsp_references()
-			end,
-			"Go to references",
-		},
-		i = {
-			function()
-				require("telescope.builtin").lsp_implementations()
-			end,
-			"Go to implementation",
-		},
-		r = {
-			function()
-				vim.lsp.buf.rename()
-			end,
-			"Rename",
-		},
-		k = {
-			function()
-				vim.lsp.buf.hover()
-			end,
-			"Preview docs",
-		},
-		h = {
-			function()
-				vim.lsp.buf.signature_help()
-			end,
-			"Preview signature",
-		},
-		a = {
-			"<cmd>Lspsaga code_action<CR>",
-			"Code actions",
-		},
-		j = {
-			function()
-				require("telescope.builtin").lsp_document_symbols()
-			end,
-			"Jump to symbol",
-		},
-		f = {
-			function()
-				vim.lsp.buf.format({ buffer = true, async = true })
-			end,
-			"Format buffer",
-		},
-	},
-	g = {
-		name = "+git",
-		s = {
-			function()
-				require("telescope.builtin").git_status()
-			end,
-			"List git changes",
-		},
-		b = {
-			function()
-				require("telescope.builtin").git_branches()
-			end,
-			"List git branches",
-		},
-		c = {
-			function()
-				require("telescope.builtin").git_commits()
-			end,
-			"List commits",
-		},
-		h = {
-			function()
-				require("telescope.builtin").git_bcommits()
-			end,
-			"Show file history",
-		},
-		x = {
-			":GitConflictListQf<CR>",
-			"Comflict files",
-		},
-		a = {
-			":Gitsigns stage_hunk<CR>",
-			"Stage hunk",
-		},
-		r = {
-			":Gitsigns reset_hunk<CR>",
-			"Restore hunk",
-		},
-		A = {
-			function()
-				require("gitsigns").stage_buffer()
-			end,
-			"Stage buffer",
-		},
-		R = {
-			function()
-				require("gitsigns").reset_buffer()
-			end,
-			"Restore buffer",
-		},
-		p = {
-			function()
-				require("gitsigns").preview_hunk()
-			end,
-			"Preview hunk",
-		},
-		l = {
-			function()
-				require("gitsigns").toggle_current_line_blame()
-			end,
-			"Blame",
-		},
-		d = {
-			function()
-				require("gitsigns").diffthis()
-			end,
-			"Diff",
-		},
-		D = {
-			function()
-				require("gitsigns").diffthis("~")
-			end,
-			"Diff buffer",
-		},
-	},
-	o = {
-		name = "+open",
-		e = {
-			":NvimTreeToggle<CR>",
-			"Project explorer",
-		},
-		s = {
-			":SymbolsOutline<CR>",
-			"Symbols outline",
-		},
-		d = {
-			name = "Diagnostic",
-			d = {
-				":TroubleToggle<CR>",
-				"Diagnostic",
-			},
-			w = {
-				":TroubleToggle workspace_diagnostics<CR>",
-				"Diagnostic Workspace",
-			},
-		},
-		c = {
-			":edit ~/.config/nvim/lua <CR>",
-			"Config",
-		},
-		q = {
-			":copen<CR>",
-			"Quickfix",
-		},
-		m = {
-			":MarkdownPreview<CR>",
-			"Markdown Preview",
-		},
-	},
-	t = {
-		name = "+toggle",
-		h = {
-			":nohl<CR>",
-			"Search highligh",
-		},
-		w = {
-			":set wrap!<CR>",
-			"Word wrap",
-		},
-		c = {
-			":set list!<CR>",
-			"Hidden chars",
-		},
-		s = {
-			":set spell!<CR>",
-			"Spell checking",
-		},
-	},
-	b = {
-		name = "+buffers",
-		k = {
-			":Bdelete<CR>",
-			"Close buffer",
-		},
-		K = {
-			":%Bdelete<CR>",
-			"Close all buffers",
-		},
-		l = {
-			function()
-				require("telescope.builtin").buffers({
-					sort_mru = true,
-					ignore_current_buffer = true,
-				})
-			end,
-			"Opened buffers",
-		},
-		[">"] = {
-			":BufferLineMoveNext<CR>",
-			"Move Next",
-		},
-		["<"] = {
-			":BufferLineMovePrev<CR>",
-			"Move Previous",
-		},
-	},
-	z = {
+	["<leader>z"] = {
 		name = "+zettelkasten",
-		a = {
-			function()
-				require("telekasten").panel()
-			end,
-			"All options",
-		},
-		f = {
-			function()
-				require("telekasten").find_notes()
-			end,
-			"Find notes",
-		},
-		n = {
-			function()
-				require("telekasten").new_note()
-			end,
-			"New note",
-		},
-		t = {
-			function()
-				require("telekasten").show_tags()
-			end,
-			"Find tags",
-		},
-		i = {
-			function()
-				require("telekasten").insert_link()
-			end,
-			"Insert link",
-		},
-		l = {
-			function()
-				require("telekasten").follow_link()
-			end,
-			"Follow link",
-		},
-		r = {
-			function()
-				require("telekasten").rename_note()
-			end,
-			"Rename note",
-		},
-		d = {
-			function()
-				require("telekasten").goto_today()
-			end,
-			"Go to today",
-		},
-		w = {
-			function()
-				require("telekasten").goto_thisweek()
-			end,
-			"Go to this week",
-		},
-		c = {
-			function()
-				require("telekasten").show_calendar()
-			end,
-			"Show calendar",
-		},
 	},
-}, { prefix = "<leader>" })
+	["<leader>za"] = {
+		function()
+			require("telekasten").panel()
+		end,
+		"All options",
+	},
+	["<leader>zf"] = {
+		function()
+			require("telekasten").find_notes()
+		end,
+		"Find notes",
+	},
+	["<leader>zn"] = {
+		function()
+			require("telekasten").new_note()
+		end,
+		"New note",
+	},
+	["<leader>zt"] = {
+		function()
+			require("telekasten").show_tags()
+		end,
+		"Find tags",
+	},
+	["<leader>zi"] = {
+		function()
+			require("telekasten").insert_link()
+		end,
+		"Insert link",
+	},
+	["<leader>zl"] = {
+		function()
+			require("telekasten").follow_link()
+		end,
+		"Follow link",
+	},
+	["<leader>zr"] = {
+		function()
+			require("telekasten").rename_note()
+		end,
+		"Rename note",
+	},
+	["<leader>zd"] = {
+		function()
+			require("telekasten").goto_today()
+		end,
+		"Go to today",
+	},
+	["<leader>zw"] = {
+		function()
+			require("telekasten").goto_thisweek()
+		end,
+		"Go to this week",
+	},
+	["<leader>zc"] = {
+		function()
+			require("telekasten").show_calendar()
+		end,
+		"Show calendar",
+	},
+})
 
 wk.register({
 	g = {
 		name = "+git",
-		a = {
-			":Gitsigns stage_hunk<CR>",
-			"Stage hunk",
-		},
-		r = {
-			":Gitsigns reset_hunk<CR>",
-			"Reset hunk",
-		},
 	},
-}, { mode = "v", prefix = "<leader>" })
+	["<leader>ga"] = {
+		":Gitsigns stage_hunk<CR>",
+		"Stage hunk",
+	},
+	["<leader>gr"] = {
+		":Gitsigns reset_hunk<CR>",
+		"Reset hunk",
+	},
+}, { mode = "v" })
