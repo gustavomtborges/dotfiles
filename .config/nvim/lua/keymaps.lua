@@ -34,21 +34,33 @@ wk.setup({
 })
 
 wk.register({
-	["<C-p>"] = {
+	["<leader>p"] = {
 		function()
 			require("telescope.builtin").find_files({ previewer = false })
 		end,
 		"Find File",
 	},
-	["<C-j>"] = {
+	["<leader>e"] = {
+		":NvimTreeToggle<CR>",
+		"File explorer",
+	},
+	["<leader>j"] = {
 		":BufferLineCyclePrev<CR>",
 		"Previous buffer",
 	},
-	["<C-k>"] = {
+	["<leader>J"] = {
+		":BufferLineMovePrev<CR>",
+		"Move buffer left",
+	},
+	["<leader>k"] = {
 		":BufferLineCycleNext<CR>",
 		"Next buffer",
 	},
-	["<C-l>"] = {
+	["<leader>K"] = {
+		":BufferLineMoveNext<CR>",
+		"Move buffer right",
+	},
+	["<leader>;"] = {
 		function()
 			require("telescope.builtin").buffers({
 				sort_mru = true,
@@ -58,15 +70,15 @@ wk.register({
 		end,
 		"Opened buffers",
 	},
-	["<C-q>"] = {
+	["<leader>q"] = {
 		":Bdelete<CR>",
 		"Close buffer",
 	},
-	["<C-S-q>"] = {
+	["<leader>Q"] = {
 		":q<CR>",
-		"Close pane",
+		"Close window",
 	},
-	["[c"] = {
+	["[g"] = {
 		function()
 			require("gitsigns").prev_hunk({ buffer = true })
 		end,
@@ -78,23 +90,17 @@ wk.register({
 		end,
 		"Previous diagnostic",
 	},
-	["]c"] = {
+	["]g"] = {
 		function()
-			require("gitsigns").prev_hunk({ buffer = true })
+			require("gitsigns").next_hunk({ buffer = true })
 		end,
-		"Previous change",
+		"Next change",
 	},
 	["]d"] = {
 		function()
-			vim.diagnostic.goto_prev()
+			vim.diagnostic.goto_next()
 		end,
-		"Previous diagnostic",
-	},
-	["<leader>p"] = {
-		function()
-			require("telescope.builtin").find_files({ previewer = false })
-		end,
-		"Find File",
+		"Next diagnostic",
 	},
 	["<leader>R"] = {
 		"*``cgn",
@@ -158,20 +164,19 @@ wk.register({
 		end,
 		"Go to implementation",
 	},
-	["<leader>r"] = { name = "rename" },
-	["<leader>rn"] = {
+	["<leader>r"] = {
 		function()
 			vim.lsp.buf.rename()
 		end,
 		"",
 	},
-	["H"] = {
+	["<leader>h"] = {
 		function()
 			vim.lsp.buf.hover()
 		end,
 		"Preview docs",
 	},
-	["<C-h>"] = {
+	["<leader>H"] = {
 		function()
 			vim.lsp.buf.signature_help()
 		end,
@@ -332,11 +337,11 @@ wk.register({
 		end,
 		"Opened buffers",
 	},
-	["<leader>b>"] = {
+	["<leader>bn"] = {
 		":BufferLineMoveNext<CR>",
 		"Move Next",
 	},
-	["<leader>b<"] = {
+	["<leader>bp"] = {
 		":BufferLineMovePrev<CR>",
 		"Move Previous",
 	},

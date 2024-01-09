@@ -167,10 +167,16 @@ local custom_center = {
 	{
 		icon = "  ",
 		desc = "Find files                     ",
-		key = "SPC p ",
+		key = "SPC p",
 		action = function()
 			require("telescope.builtin").find_files({ previewer = false })
 		end,
+	},
+	{
+		icon = "  ",
+		desc = "Open explorer                  ",
+		key = "SPC e",
+		action = ":NvimTreeToggle<CR>",
 	},
 	{
 		icon = "  ",
