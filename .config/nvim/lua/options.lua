@@ -7,7 +7,7 @@ vim.opt.shiftwidth = 2 -- Number of spaces inserted for each identation
 vim.opt.tabstop = 2 -- Insert 4 spaces for a tab
 vim.opt.expandtab = true -- Convert tabs to spaces
 vim.opt.incsearch = true -- Search strings as you type
-vim.opt.hlsearch = true -- Highlight search strings
+vim.opt.hlsearch = false -- Highlight search strings
 vim.opt.ignorecase = true -- Ignore case when searching
 vim.opt.smartcase = true -- Do not ignore case with Capitals
 vim.opt.smartindent = true -- Insert indents automatically
@@ -99,18 +99,6 @@ require("solarized").setup({
 		keywords = { bold = true },
 	},
 })
-
-require("catppuccin").setup({
-	transparent_background = true,
-	styles = {
-		keywords = { "bold" },
-	},
-})
-
-vim.g.sonokai_transparent_background = 1
-vim.g.everforest_background = "medium"
-vim.g.everforest_transparent_background = 1
-vim.g.edge_transparent_background = 1
 
 local c = require("vscode.colors").get_colors()
 require("vscode").setup({

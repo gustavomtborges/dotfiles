@@ -1,11 +1,10 @@
-require("bufferline").setup({
-	options = {
-		buffer_close_icon = "",
-	},
-})
+-- require("bufferline").setup({
+-- 	options = {
+-- 		buffer_close_icon = "",
+-- 	},
+-- })
 
 require("gitsigns").setup()
-require("neoscroll").setup()
 require("colorizer").setup()
 local telescope = require("telescope")
 telescope.load_extension("fzf")
@@ -29,17 +28,17 @@ local onedark_highlight = {
 	"OneDark",
 }
 
-local hooks = require("ibl.hooks")
-hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-	vim.api.nvim_set_hl(0, "Solarized", { fg = "#EDE6C7" })
-	vim.api.nvim_set_hl(0, "OneDark", { fg = "#ececec" })
-end)
-
-require("ibl").setup({
-	exclude = { filetypes = { "dashboard" } },
-	scope = { enabled = false },
-	-- indent = { highlight = solarized_highlight },
-})
+-- local hooks = require("ibl.hooks")
+-- hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+-- 	vim.api.nvim_set_hl(0, "Solarized", { fg = "#EDE6C7" })
+-- 	vim.api.nvim_set_hl(0, "OneDark", { fg = "#ececec" })
+-- end)
+--
+-- require("ibl").setup({
+-- 	exclude = { filetypes = { "dashboard" } },
+-- 	scope = { enabled = false },
+-- 	-- indent = { highlight = solarized_highlight },
+-- })
 
 local function list_registered_providers_names(filetype)
 	local s = require("null-ls.sources")
@@ -118,7 +117,6 @@ require("lualine").setup({
 				"filename",
 				path = 1,
 			},
-			"lsp_progress",
 			{ lsp_client, icon = " ", color = { fg = "#999", gui = "bold" } },
 		},
 		lualine_z = {
@@ -167,7 +165,7 @@ local custom_center = {
 	{
 		icon = "  ",
 		desc = "Find files                     ",
-		key = "SPC p",
+		key = "CTRL p",
 		action = function()
 			require("telescope.builtin").find_files({ previewer = false })
 		end,
