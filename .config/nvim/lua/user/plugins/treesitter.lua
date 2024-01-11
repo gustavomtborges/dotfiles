@@ -1,4 +1,10 @@
-require("nvim-treesitter.configs").setup({
+return {
+"nvim-treesitter/nvim-treesitter",
+ build = ":TSUpdate",
+ config = function()
+ local treesitter = require("nvim-treesitter.configs")
+
+treesitter.setup({
 	-- A list of parser names, or "all" (the five listed parsers should always be installed)
 	ensure_installed = {
 		"lua",
@@ -54,3 +60,5 @@ require("nvim-treesitter.configs").setup({
 		additional_vim_regex_highlighting = false,
 	},
 })
+end,
+}

@@ -4,14 +4,8 @@ vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("n", "K", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
 
--- Save with Ctrl-s
-vim.keymap.set("n", "<C-s>", ":<c-u>update<CR>")
-
--- Move esasly between splits
--- vim.keymap.set("n", "<C-j>", "<C-w><C-j>", default_opts)
--- vim.keymap.set("n", "<C-k>", "<C-w><C-k>", default_opts)
--- vim.keymap.set("n", "<C-l>", "<C-w><C-l>", default_opts)
--- vim.keymap.set("n", "<C-h>", "<C-w><C-h>", default_opts)
+-- Save with <C-s>
+vim.keymap.set("n", "<C-s>", ":update<CR>")
 
 -- Copy to clipboard
 vim.keymap.set("n", "<leader>y", '"+y')
@@ -36,3 +30,20 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 -- Preserve paste
 vim.keymap.set("x", "<leader>p", '"_dP')
+
+-- Buffers
+vim.keymap.set("n", "<C-h>", ":bprev<CR>")
+vim.keymap.set("n", "<C-l>", ":bnext<CR>")
+vim.keymap.set("n", "<leader>w", ":bd<CR>")
+
+-- Spilts
+vim.keymap.set("n", "<leader>h", "<C-w><C-h>")
+vim.keymap.set("n", "<leader>l", "<C-w><C-l>")
+vim.keymap.set("n", "<leader>sv", "<C-w>v")
+vim.keymap.set("n", "<leader>sh", "<C-w>s")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
+
+-- Toggles
+vim.keymap.set("n", "<leader>th", ":nohl<CR>")
+vim.keymap.set("n", "<leader>tw", ":set wrap!<CR>")
+vim.keymap.set("n", "<leader>ts", ":set spell!<CR>")
