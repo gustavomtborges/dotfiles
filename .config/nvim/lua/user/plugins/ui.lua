@@ -89,6 +89,7 @@ return {
 			})
 		end,
 	},
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons", config = true },
 	{
 		"simrat39/symbols-outline.nvim",
 		config = function()

@@ -7,10 +7,11 @@ return {
 			require("github-theme").setup({
 				options = {
 					transparent = true,
+					styles = {
+						keywords = "bold",
+					},
 				},
 			})
-
-			vim.cmd("colorscheme github_dark")
 		end,
 	},
 	{
@@ -24,7 +25,45 @@ return {
 					["@keyword"] = { fg = c.vscBlue, bg = "none", bold = true },
 				},
 			})
-			require("vscode").load()
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			transparent = true,
+			styles = {
+				keywords = { bold = true },
+			},
+		},
+	},
+	{
+		"EdenEast/nightfox.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("nightfox").setup({
+				options = {
+					transparent = true,
+				},
+				styles = {
+					keywords = "bold",
+				},
+				groups = {
+					all = {
+						["@tag.attribute"] = { style = "" },
+					},
+				},
+				palettes = {
+					dayfox = {
+						bg2 = "#DCE4E2", -- Lighter bg (colorcolm folds)
+						bg3 = "#DCE4E2", -- Lighter bg (cursor line)
+						sel0 = "#CACFC8", -- Popup bg, visual selection bg
+						sel1 = "#CACFC8", -- Popup sel bg, search bg
+					},
+				},
+			})
 		end,
 	},
 }
