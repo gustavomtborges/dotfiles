@@ -6,6 +6,7 @@ return {
 		config = function()
 			require("github-theme").setup({
 				options = {
+					transparent = true,
 					styles = {
 						keywords = "bold",
 					},
@@ -31,8 +32,11 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
+			transparent = true,
 			styles = {
 				keywords = { bold = true },
+				floats = "transparent",
+				sidebars = "transparent",
 			},
 		},
 	},
@@ -42,6 +46,9 @@ return {
 		priority = 1000,
 		config = function()
 			require("nightfox").setup({
+				options = {
+					transparent = true,
+				},
 				styles = {
 					keywords = "bold",
 				},

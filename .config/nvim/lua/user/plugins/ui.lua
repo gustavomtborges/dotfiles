@@ -106,37 +106,27 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			require("gitsigns").setup({
-				on_attach = function()
+				on_attach = function(bufnr)
 					local gs = package.loaded.gitsigns
 
-					vim.keymap.set("n", "[g", function()
-						gs.prev_hunk({ buffer = true })
-					end)
+					vim.keymap.set("n", "[g", gs.prev_hunk, { buffer = bufnr })
+					vim.keymap.set("n", "]g", gs.next_hunk, { buffer = bufnr })
 
-					vim.keymap.set("n", "]g", function()
-						gs.next_hunk({ buffer = true })
-					end)
+					vim.keymap.set("v", "<leader>ga", function()
+						gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+					end, { buffer = bufnr })
+					vim.keymap.set("v", "<leader>gr", function()
+						gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+					end, { buffer = bufnr })
 
-					vim.keymap.set("n", "<leader>ga", ":Gitsigns stage_hunk<CR>")
-					vim.keymap.set("n", "<leader>gr", ":Gitsigns reset_hunk<CR>")
+					vim.keymap.set("n", "<leader>gA", gs.stage_buffer, { buffer = bufnr })
+					vim.keymap.set("n", "<leader>gR", gs.reset_buffer, { buffer = bufnr })
 
-					vim.keymap.set("n", "<leader>gA", function()
-						gs.stage_buffer()
-					end)
-
-					vim.keymap.set("n", "<leader>gR", function()
-						gs.reset_buffer()
-					end)
-
-					vim.keymap.set("n", "<leader>gp", function()
-						require("gitsigns").preview_hunk()
-					end)
-					vim.keymap.set("n", "<leader>gd", function()
-						require("gitsigns").diffthis()
-					end)
+					vim.keymap.set("n", "<leader>gp", gs.preview_hunk, { buffer = bufnr })
+					vim.keymap.set("n", "<leader>gd", gs.diffthis, { buffer = bufnr })
 					vim.keymap.set("n", "<leader>gD", function()
-						require("gitsigns").diffthis("~")
-					end)
+						gs.diffthis("~")
+					end, { buffer = bufnr })
 				end,
 			})
 		end,
