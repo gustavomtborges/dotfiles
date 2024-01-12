@@ -70,7 +70,7 @@ return {
 		vim.keymap.set("n", "<leader>gc", function()
 			require("telescope.builtin").git_commits()
 		end)
-		vim.keymap.set("n", "<leader>g", function()
+		vim.keymap.set("n", "<leader>gh", function()
 			require("telescope.builtin").git_bcommits()
 		end)
 	end,

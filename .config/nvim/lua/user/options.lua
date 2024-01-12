@@ -24,17 +24,10 @@ vim.opt.listchars = { tab = "→ ", trail = "∙", eol = "¬" }
 vim.opt.list = false
 vim.opt.signcolumn = "yes"
 
--- witch-key settings
-vim.opt.timeout = true
-vim.opt.timeoutlen = 500
-
 --vim.opt.clipboard = "unnamed" -- Copy and paste with OS clipboard
 vim.opt.cursorline = true -- Highlight the current line
 vim.opt.colorcolumn = "80" -- Show column ruler
 vim.opt.wrap = false -- Don't wrap lines
-vim.opt.fillchars = { fold = " " }
-vim.opt.foldmethod = "indent"
-vim.opt.foldenable = false
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.opt.spelllang = { "pt_br", "en_us" }
@@ -68,41 +61,6 @@ end
 --  end,
 --})
 --
---require("tokyonight").setup({
---  transparent = true,
---  styles = {
---    keywords = "bold",
---  },
---})
---
---require("github-theme").setup({
---  options = {
---    transparent = true,
---  },
---})
---
---require("nightfox").setup({
---  options = {
---    transparent = true,
---    styles = {
---      keywords = "bold",
---    },
---  },
---  palettes = {
---    nightfox = {
---      bg2 = "#39404f", -- Lighter bg (colorcolm folds)
---      bg3 = "#444c5e", -- Lighter bg (cursor line)
---      sel0 = "#3e4a5b", -- Popup bg, visual selection bg
---      sel1 = "#4f6074", -- Popup sel bg, search bg
---    },
---    dayfox = {
---      bg2 = "#DCE4E2", -- Lighter bg (colorcolm folds)
---      bg3 = "#DCE4E2", -- Lighter bg (cursor line)
---      sel0 = "#CACFC8", -- Popup bg, visual selection bg
---      sel1 = "#CACFC8", -- Popup sel bg, search bg
---    },
---  },
---})
 --
 --require("onedark").setup({
 --  transparent = true,
@@ -118,14 +76,3 @@ end
 --  },
 --})
 --
---local c = require("vscode.colors").get_colors()
---require("vscode").setup({
---  transparent = true,
---  disable_nvimtree_bg = true,
---  group_overrides = {
---    ["@keyword"] = { fg = c.vscBlue, bg = "none", bold = true },
---  },
---})
---require("vscode").load()
---
----- Set colorscheme

@@ -105,35 +105,40 @@ return {
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
-			local gitsigns = require("gitsigns")
-			vim.keymap.set("n", "[g", function()
-				gitsigns.prev_hunk({ buffer = true })
-			end)
+			require("gitsigns").setup({
+				on_attach = function()
+					local gs = package.loaded.gitsigns
 
-			vim.keymap.set("n", "]g", function()
-				gitsigns.next_hunk({ buffer = true })
-			end)
+					vim.keymap.set("n", "[g", function()
+						gs.prev_hunk({ buffer = true })
+					end)
 
-			vim.keymap.set("n", "<leader>ga", ":Gitsigns stage_hunk<CR>")
-			vim.keymap.set("n", "<leader>gr", ":Gitsigns reset_hunk<CR>")
+					vim.keymap.set("n", "]g", function()
+						gs.next_hunk({ buffer = true })
+					end)
 
-			vim.keymap.set("n", "<leader>gA", function()
-				gitsigns.stage_buffer()
-			end)
+					vim.keymap.set("n", "<leader>ga", ":Gitsigns stage_hunk<CR>")
+					vim.keymap.set("n", "<leader>gr", ":Gitsigns reset_hunk<CR>")
 
-			vim.keymap.set("n", "<leader>gR", function()
-				gitsigns.reset_buffer()
-			end)
+					vim.keymap.set("n", "<leader>gA", function()
+						gs.stage_buffer()
+					end)
 
-			vim.keymap.set("n", "<leader>gp", function()
-				require("gitsigns").preview_hunk()
-			end)
-			vim.keymap.set("n", "<leader>gd", function()
-				require("gitsigns").diffthis()
-			end)
-			vim.keymap.set("n", "<leader>gD", function()
-				require("gitsigns").diffthis("~")
-			end)
+					vim.keymap.set("n", "<leader>gR", function()
+						gs.reset_buffer()
+					end)
+
+					vim.keymap.set("n", "<leader>gp", function()
+						require("gitsigns").preview_hunk()
+					end)
+					vim.keymap.set("n", "<leader>gd", function()
+						require("gitsigns").diffthis()
+					end)
+					vim.keymap.set("n", "<leader>gD", function()
+						require("gitsigns").diffthis("~")
+					end)
+				end,
+			})
 		end,
 	},
 	{
