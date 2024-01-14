@@ -33,12 +33,7 @@ return {
 		"akinsho/git-conflict.nvim",
 		version = "*",
 		config = function()
-			require("git-conflict").setup({
-				default_mappings = {
-					next = "]x",
-					prev = "[x",
-				},
-			})
+			require("git-conflict").setup()
 
 			vim.keymap.set("n", "<leader>gx", ":GitConflictListQf<CR>")
 		end,
