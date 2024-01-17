@@ -9,10 +9,12 @@ Host caninos
 Host db.qa.tipspace
   Hostname 10.0.134.78
   User ec2-user
+  IdentityFile staging-ohio-key
 
-Host bucardo.tipspace
+Host bucardo
   Hostname 10.10.8.192
   User ec2-user
+  IdentityFile prod-sp-key
 
 Host *
   IdentityAgent ~/.1password/agent.sock
