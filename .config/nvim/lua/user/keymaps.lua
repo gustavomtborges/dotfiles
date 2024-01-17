@@ -5,7 +5,7 @@ vim.keymap.set("n", "K", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Save with <C-s>
-vim.keymap.set("n", "<C-s>", ":update<CR>")
+vim.keymap.set({ "n" }, "<C-s>", ":update<CR>")
 
 -- Copy to clipboard
 vim.keymap.set("n", "<leader>y", '"+y')
