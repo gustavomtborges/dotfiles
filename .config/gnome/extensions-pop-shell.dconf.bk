@@ -1,7 +1,7 @@
 [/]
 active-hint=true
 tile-by-default=true
-tile-enter=['<Alt>r']
-tile-orientation=['<Alt>b']
-toggle-floating=['<Alt><Shift>d']
-toggle-stacking-global=['<Alt>w']
+tile-enter=['<Super>r']
+tile-orientation=['<Super>b']
+toggle-floating=['<Super><Shift>d']
+toggle-stacking-global=['<Super>w']
