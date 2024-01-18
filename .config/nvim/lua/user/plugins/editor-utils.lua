@@ -16,11 +16,17 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup({
-				filetypes = { "html", "heex", "astro" },
-			})
-		end,
+		opts = {
+			filetypes = {
+				"html",
+				"xml",
+				"markdown",
+				"mdx",
+				"astro",
+				"elixir",
+				"heex",
+			},
+		},
 	},
 	{
 		"numToStr/Comment.nvim",
