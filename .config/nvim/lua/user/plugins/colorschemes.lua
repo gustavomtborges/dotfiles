@@ -20,7 +20,7 @@ return {
 			local c = require("vscode.colors").get_colors()
 			require("vscode").setup({
 				transparent = true,
-				disable_nvimtree_bg = true,
+				disable_nvimtree_bg = false,
 				group_overrides = {
 					["@keyword"] = { fg = c.vscBlue, bg = "none", bold = true },
 				},
