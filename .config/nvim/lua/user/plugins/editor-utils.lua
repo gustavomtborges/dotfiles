@@ -1,5 +1,11 @@
 return {
 	{
+		"github/copilot.vim",
+		config = function()
+			vim.keymap.set("n", "<leader>tc", ":Copilot enable<CR>")
+		end,
+	},
+	{
 		"Exafunction/codeium.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
