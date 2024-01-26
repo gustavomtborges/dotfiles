@@ -3,7 +3,13 @@ return {
 		"github/copilot.vim",
 		config = function()
 			vim.keymap.set("n", "<leader>tc", ":Copilot enable<CR>")
-			vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+			vim.keymap.set(
+				"i",
+				"<C-TAB>",
+				"copilot#Accept('<CR>')",
+				{ noremap = true, silent = true, expr = true, replace_keycodes = false }
+			)
+			vim.keymap.set("i", "<C-S-TAB>", "copilot#Next()", { noremap = true, silent = true, expr = true })
 			vim.g.copilot_no_tab_map = true
 		end,
 	},
