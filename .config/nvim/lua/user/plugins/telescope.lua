@@ -30,6 +30,9 @@ return {
 		vim.keymap.set("n", "<C-p>", function()
 			builtin.find_files({ previewer = false })
 		end)
+		vim.keymap.set("n", "<leader>p", function()
+			builtin.find_files({ previewer = false })
+		end)
 
 		vim.keymap.set("n", "<leader>o", function()
 			builtin.buffers({
@@ -58,6 +61,9 @@ return {
 		-- LSP
 		vim.keymap.set("n", "<leader>cj", function()
 			builtin.lsp_document_symbols()
+		end)
+		vim.keymap.set("n", "gr", function()
+			builtin.lsp_references()
 		end)
 
 		-- GIT

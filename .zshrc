@@ -83,6 +83,8 @@ plugins=(
 	zsh-syntax-highlighting 
 	asdf
   aws
+  terraform
+  ansible
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -9,7 +9,7 @@ vim.opt.expandtab = true -- Convert tabs to spaces
 vim.opt.incsearch = true -- Search strings as you type
 vim.opt.hlsearch = false -- Highlight search strings
 vim.opt.ignorecase = true -- Ignore case when searching
-vim.opt.smartcase = true -- Do not ignore case with Capitals
+vim.opt.smartcase = true -- Do not ignore case with Cvim.apitals
 vim.opt.smartindent = true -- Insert indents automatically
 vim.opt.updatetime = 300 -- Quicker update
 vim.opt.termguicolors = true -- True color support
@@ -28,14 +28,14 @@ vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true -- Highlight the current line
 vim.opt.colorcolumn = "80" -- Show column ruler
 vim.opt.wrap = false -- Don't wrap lines
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+vim.opt.foldlevel = 20
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.api.nvim_create_autocmd({ "BufEnter" }, { pattern = { "*" }, command = "normal zx", })
 
 vim.opt.spelllang = { "pt_br", "en_us" }
 vim.opt.spell = false
-
-vim.opt.list = false
-vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↴")
 
 vim.opt.background = "dark"
 
@@ -51,15 +51,16 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
---Fix folding with treesitter
---vim.api.nvim_create_autocmd("BufRead", {
---  callback = function()
---    vim.api.nvim_create_autocmd("BufWinEnter", {
---      once = true,
---      command = "normal! zx zR",
---    })
---  end,
---})
+-- Fix folding with treesitter
+-- vim.api.nvim_create_autocmd("BufRead", {
+-- 	callback = function()
+-- 		vim.vim.api.nvim_create_autocmd("BufWinEnter", {
+-- 			once = true,
+-- 			command = "normal! zx zR",
+-- 		})
+-- 	end,
+-- })
+
 --
 --
 --require("solarized").setup({

@@ -29,7 +29,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 -- Preserve paste
-vim.keymap.set("x", "<leader>p", '"_dP')
+vim.keymap.set("x", "<M-p>", '"_dP')
 
 -- Buffers
 vim.keymap.set("n", "<C-h>", ":bprev<CR>")
@@ -37,10 +37,13 @@ vim.keymap.set("n", "<C-l>", ":bnext<CR>")
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
 
 -- Spilts
-vim.keymap.set("n", "<leader>h", "<C-w><C-h>")
-vim.keymap.set("n", "<leader>l", "<C-w><C-l>")
-vim.keymap.set("n", "<leader>sv", "<C-w>v")
-vim.keymap.set("n", "<leader>sh", "<C-w>s")
+vim.keymap.set("n", "<M-h>", "<C-w><C-h>")
+vim.keymap.set("n", "<M-l>", "<C-w><C-l>")
+vim.keymap.set("n", "<M-j>", "<C-w><C-j>")
+vim.keymap.set("n", "<M-k>", "<C-w><C-k>")
+
+vim.keymap.set("n", "<leader>v", "<C-w>v")
+vim.keymap.set("n", "<leader>h", "<C-w>s")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 
 -- Toggles

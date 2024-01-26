@@ -103,7 +103,7 @@ return {
 				width = 15,
 			})
 
-			vim.keymap.set("n", "<leader>s", ":SymbolsOutline<CR>")
+			vim.keymap.set("n", "<leader>ts", ":SymbolsOutline<CR>")
 		end,
 	},
 	{
@@ -178,7 +178,7 @@ return {
 				{
 					icon = "  ",
 					desc = "Find files                     ",
-					key = "CTRL p",
+					key = "SPC p",
 					action = function()
 						require("telescope.builtin").find_files({ previewer = false })
 					end,
