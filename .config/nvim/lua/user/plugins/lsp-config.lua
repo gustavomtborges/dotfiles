@@ -163,7 +163,6 @@ return {
 			sources = {
 				null_ls.builtins.completion.spell,
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.xmllint,
 				null_ls.builtins.formatting.prettierd.with({
 					extra_filetypes = {
 						"telekasten",
@@ -173,7 +172,6 @@ return {
 					},
 				}),
 				null_ls.builtins.formatting.terraform_fmt,
-				null_ls.builtins.diagnostics.jsonlint,
 			},
 			on_attach = format_on_save,
 		})
