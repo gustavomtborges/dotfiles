@@ -7,9 +7,6 @@ return {
 			require("github-theme").setup({
 				options = {
 					transparent = true,
-					styles = {
-						keywords = "bold",
-					},
 				},
 			})
 		end,
@@ -17,13 +14,9 @@ return {
 	{
 		"Mofiqul/vscode.nvim",
 		config = function()
-			local c = require("vscode.colors").get_colors()
 			require("vscode").setup({
 				transparent = true,
 				disable_nvimtree_bg = false,
-				group_overrides = {
-					["@keyword"] = { fg = c.vscBlue, bg = "none", bold = true },
-				},
 			})
 		end,
 	},
@@ -33,13 +26,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("tokyonight").setup({
-				style = "storm",
 				transparent = true,
-				styles = {
-					keywords = { bold = true },
-					floats = "transparent",
-					sidebars = "transparent",
-				},
 			})
 		end,
 	},
@@ -50,10 +37,13 @@ return {
 		config = function()
 			require("onedark").setup({
 				transparent = true,
-				code_style = {
-					keywords = "bold",
-				},
 			})
+		end,
+	},
+	{
+		"ishan9299/nvim-solarized-lua",
+		config = function()
+			vim.g.solarized_termtrans = 0
 		end,
 	},
 }
