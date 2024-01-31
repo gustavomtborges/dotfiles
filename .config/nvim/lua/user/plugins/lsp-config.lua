@@ -65,6 +65,7 @@ return {
 		})
 
 		lspconfig.jsonls.setup({
+			filetypes = { "json", "jsonc", "tpl" },
 			settings = {
 				json = {
 					schemas = require("schemastore").json.schemas(),
@@ -100,6 +101,7 @@ return {
 		})
 		lspconfig.gopls.setup({})
 		lspconfig.omnisharp.setup({})
+		lspconfig.marksman.setup({})
 
 		-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 		-- 	pattern = { "*.tf", "*.tfvars" },
@@ -179,9 +181,11 @@ return {
 		vim.filetype.add({
 			extension = {
 				mdx = "mdx",
+				tpl = "tpl",
 			},
 		})
 
 		vim.treesitter.language.register("typescript", "mdx")
+		vim.treesitter.language.register("json", "tpl")
 	end,
 }
