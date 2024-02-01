@@ -42,6 +42,12 @@ vim.keymap.set("n", "<M-l>", "<C-w><C-l>")
 vim.keymap.set("n", "<M-j>", "<C-w><C-j>")
 vim.keymap.set("n", "<M-k>", "<C-w><C-k>")
 
+-- Spilts resize
+vim.keymap.set("n", "<M-S-h>", "<C-w>>")
+vim.keymap.set("n", "<M-S-l>", "<C-w><")
+vim.keymap.set("n", "<M-S-j>", "<C-w>+")
+vim.keymap.set("n", "<M-S-k>", "<C-w>-")
+
 vim.keymap.set("n", "<leader>v", "<C-w>v")
 vim.keymap.set("n", "<leader>h", "<C-w>s")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
