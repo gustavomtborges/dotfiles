@@ -6,6 +6,6 @@ return {
 		vim.fn["mkdp#util#install"]()
 	end,
 	config = function()
-		vim.keymap.set("n", "<leader>om", ":MarkdownPreview<CR>")
+		vim.keymap.set("n", "<leader>m", ":MarkdownPreview<CR>")
 	end,
 }

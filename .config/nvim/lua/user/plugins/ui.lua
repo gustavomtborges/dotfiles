@@ -150,7 +150,7 @@ return {
 						gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
 					end, { buffer = bufnr })
 
-					vim.keymap.set("n", "<leader>gt", gs.toggle_current_line_blame)
+					vim.keymap.set("n", "<leader>gb", gs.toggle_current_line_blame)
 
 					vim.keymap.set("n", "<leader>gA", gs.stage_buffer, { buffer = bufnr })
 					vim.keymap.set("n", "<leader>gR", gs.reset_buffer, { buffer = bufnr })
