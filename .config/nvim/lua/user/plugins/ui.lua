@@ -110,9 +110,21 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		config = function()
+			local github_dark_dimmed = {
+				"github_dark_dimmed",
+			}
+			local hooks = require("ibl.hooks")
+			-- create the highlight groups in the highlight setup hook, so they are reset
+			-- every time the colorscheme changes
+			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+				vim.api.nvim_set_hl(0, "github_dark_dimmed", { fg = "#31363B" })
+			end)
 			require("ibl").setup({
 				scope = {
 					enabled = false,
+				},
+				indent = {
+					highlight = github_dark_dimmed,
 				},
 				exclude = {
 					filetypes = { "dashboard", "sql", "dbout" },
