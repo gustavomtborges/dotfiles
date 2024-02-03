@@ -62,9 +62,6 @@ return {
 		vim.keymap.set("n", "<leader>cj", function()
 			builtin.lsp_document_symbols()
 		end)
-		vim.keymap.set("n", "gr", function()
-			builtin.lsp_references()
-		end)
 
 		-- GIT
 		vim.keymap.set("n", "<leader>gs", function()

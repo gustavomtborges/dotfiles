@@ -35,6 +35,7 @@ return {
 			require("neo-tree").setup({
 				enable_git_status = true,
 				enable_diagnostics = false,
+				auto_expand_width = true,
 				default_component_configs = {
 					git_status = {
 						symbols = {
