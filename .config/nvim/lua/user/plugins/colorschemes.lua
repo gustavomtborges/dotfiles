@@ -26,7 +26,14 @@ return {
 		priority = 1000,
 		config = function()
 			require("tokyonight").setup({
+				style = "night",
 				transparent = true,
+				styles = {
+					comments = "italic",
+					keywords = "none",
+					sidebars = "transparent",
+					floats = "transparent",
+				},
 			})
 		end,
 	},
