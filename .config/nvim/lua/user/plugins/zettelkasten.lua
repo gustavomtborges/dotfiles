@@ -182,7 +182,7 @@ return {
 			telekasten.goto_thisweek()
 		end)
 		vim.keymap.set("n", "<leader>zc", function()
-			telekasten.goto_calendar()
+			telekasten.show_calendar()
 		end)
 	end,
 }
