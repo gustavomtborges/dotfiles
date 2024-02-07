@@ -70,17 +70,25 @@ return {
 			end
 
 			require("lualine").setup({
-				component_separators = "|",
+				options = {
+					component_separators = "|",
+					section_separators = { left = "", right = "" },
+				},
 				sections = {
 					lualine_a = {
 						{ "mode", separator = { left = "" }, right_padding = 2 },
 					},
+					lualine_b = { "branch", "diff", "diagnostics" },
 					lualine_c = {
 						{
 							"filename",
 							path = 1,
 						},
+					},
+					lualine_x = {
 						{ lsp_client, icon = " ", color = { fg = "#999", gui = "bold" } },
+						"encoding",
+						"filetype",
 					},
 					lualine_z = {
 						{ "location", separator = { right = "" }, left_padding = 2 },
@@ -116,19 +124,28 @@ return {
 			local tokyonight_day = {
 				"tokyonight_day",
 			}
+			local solarized_light = {
+				"solarized_light",
+			}
+			local github_light = {
+				"github_light",
+			}
 			local hooks = require("ibl.hooks")
 			-- create the highlight groups in the highlight setup hook, so they are reset
 			-- every time the colorscheme changes
 			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 				vim.api.nvim_set_hl(0, "github_dark_dimmed", { fg = "#31363B" })
+				vim.api.nvim_set_hl(0, "github_light", { fg = "#E1E2E4" })
 				vim.api.nvim_set_hl(0, "tokyonight_day", { fg = "#D1D3E6" })
+				vim.api.nvim_set_hl(0, "solarized_light", { fg = "#EEE8D5" })
+				vim.api.nvim_set_hl(0, "solarized_light", { fg = "#EEE8D5" })
 			end)
 			require("ibl").setup({
 				scope = {
 					enabled = false,
 				},
 				indent = {
-					highlight = tokyonight_day,
+					highlight = github_light,
 				},
 				exclude = {
 					filetypes = { "dashboard", "sql", "dbout" },

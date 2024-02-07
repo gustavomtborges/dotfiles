@@ -3,4 +3,4 @@ require("user.keymaps")
 require("user.lazy")
 
 vim.opt.background = "light"
-vim.cmd("colorscheme solarized")
+vim.cmd("colorscheme github_light")
