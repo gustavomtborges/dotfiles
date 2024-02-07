@@ -113,18 +113,22 @@ return {
 			local github_dark_dimmed = {
 				"github_dark_dimmed",
 			}
+			local tokyonight_day = {
+				"tokyonight_day",
+			}
 			local hooks = require("ibl.hooks")
 			-- create the highlight groups in the highlight setup hook, so they are reset
 			-- every time the colorscheme changes
 			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 				vim.api.nvim_set_hl(0, "github_dark_dimmed", { fg = "#31363B" })
+				vim.api.nvim_set_hl(0, "tokyonight_day", { fg = "#D1D3E6" })
 			end)
 			require("ibl").setup({
 				scope = {
 					enabled = false,
 				},
 				indent = {
-					highlight = github_dark_dimmed,
+					highlight = tokyonight_day,
 				},
 				exclude = {
 					filetypes = { "dashboard", "sql", "dbout" },

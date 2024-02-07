@@ -178,5 +178,11 @@ return {
 		vim.keymap.set("n", "<leader>zf", function()
 			telekasten.follow_link()
 		end)
+		vim.keymap.set("n", "<leader>zw", function()
+			telekasten.goto_thisweek()
+		end)
+		vim.keymap.set("n", "<leader>zc", function()
+			telekasten.goto_calendar()
+		end)
 	end,
 }

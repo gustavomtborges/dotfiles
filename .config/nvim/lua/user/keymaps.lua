@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("i", "jk", "<esc>")
-vim.keymap.set("n", "K", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Save with <C-s>

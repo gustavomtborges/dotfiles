@@ -35,7 +35,6 @@ return {
 			require("neo-tree").setup({
 				enable_git_status = true,
 				enable_diagnostics = false,
-				auto_expand_width = true,
 				default_component_configs = {
 					git_status = {
 						symbols = {
@@ -52,9 +51,29 @@ return {
 							conflict = "",
 						},
 					},
+					file_size = {
+						enabled = false,
+						required_width = 64, -- min width of window required to show this column
+					},
+					type = {
+						enabled = false,
+						required_width = 110, -- min width of window required to show this column
+					},
+					last_modified = {
+						enabled = false,
+						required_width = 88, -- min width of window required to show this column
+					},
+					created = {
+						enabled = false,
+						required_width = 120, -- min width of window required to show this column
+					},
+					symlink_target = {
+						enabled = false,
+					},
 				},
 				window = {
 					position = "right",
+					auto_expand_width = true,
 				},
 				filesystem = {
 					follow_current_file = {
