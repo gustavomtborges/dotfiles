@@ -181,6 +181,9 @@ return {
 				null_ls.builtins.completion.spell,
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettierd.with({
+					env = {
+						PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/.prettierrc.json"),
+					},
 					extra_filetypes = {
 						"telekasten",
 						"txt",
