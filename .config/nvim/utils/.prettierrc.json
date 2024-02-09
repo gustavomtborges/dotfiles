@@ -2,4 +2,5 @@
   "printWidth": 80,
   "singleQuote": false,
   "bracketSameLine": true,
+  "proseWrap": "always",
 }

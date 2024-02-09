@@ -18,6 +18,6 @@ return {
 		vim.g.db_ui_save_location = "~/Dropbox/db_ui"
 	end,
 	config = function()
-		vim.keymap.set("n", "<leader>l", ":DBUIToggle<CR>")
+		vim.keymap.set("n", "<leader>du", ":DBUIToggle<CR>")
 	end,
 }

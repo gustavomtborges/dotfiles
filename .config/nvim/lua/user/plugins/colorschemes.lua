@@ -29,6 +29,7 @@ return {
         style = "night",
         transparent = true,
         styles = {
+          comments = "none",
           keywords = "none",
           sidebars = "transparent",
           floats = "transparent",
@@ -43,6 +44,9 @@ return {
     config = function()
       require("onedark").setup({
         transparent = true,
+        code_style = {
+          comments = "none",
+        },
       })
     end,
   },
