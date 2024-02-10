@@ -146,7 +146,7 @@ return {
 					enabled = false,
 				},
 				indent = {
-					highlight = github_light,
+					-- highlight = github_light,
 				},
 				exclude = {
 					filetypes = { "dashboard", "sql", "dbout" },
