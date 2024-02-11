@@ -116,6 +116,7 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
+alias v=nvim
 alias icat="kitty +kitten icat"
 
 function branchdel () {
