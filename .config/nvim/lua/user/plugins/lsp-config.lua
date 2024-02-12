@@ -86,7 +86,6 @@ return {
 			})
 
 			lspconfig.tailwindcss.setup({
-				filetypes = { "html", "heex", "elixir", "astro", "jsx", "tsx" },
 				init_options = {
 					userLanguages = {
 						elixir = "html-eex",
@@ -230,6 +229,7 @@ return {
 						},
 					}),
 					null_ls.builtins.formatting.terraform_fmt,
+					null_ls.builtins.formatting.sql_formatter,
 				},
 				on_attach = format_on_save,
 			})

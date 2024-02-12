@@ -4,12 +4,6 @@ return {
 		{ "tpope/vim-dadbod", lazy = true },
 		{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
 	},
-	cmd = {
-		"DBUI",
-		"DBUIToggle",
-		"DBUIAddConnection",
-		"DBUIFindBuffer",
-	},
 	init = function()
 		-- Your DBUI configuration
 		vim.g.db_ui_use_nerd_fonts = 1
@@ -18,6 +12,6 @@ return {
 		vim.g.db_ui_save_location = "~/Dropbox/db_ui"
 	end,
 	config = function()
-		vim.keymap.set("n", "<leader>du", ":DBUIToggle<CR>")
+		vim.keymap.set("n", "<leader>td", ":DBUIToggle<CR>")
 	end,
 }
