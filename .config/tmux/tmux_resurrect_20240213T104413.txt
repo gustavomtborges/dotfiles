@@ -1,0 +1,47 @@
+pane	celestiny	1	1	:*	1	gustavo@debian:~/repos/projects/celestiny	:/home/gustavo/repos/projects/celestiny	1	zsh	:
+pane	celestiny	2	0	:-	1	gustavo@debian:~/repos/projects/celestiny	:/home/gustavo/repos/projects/celestiny	1	zsh	:
+pane	config	1	1	:*	1	gustavo@debian:~/repos/config/dotfiles/.config	:/home/gustavo/repos/config/dotfiles/.config	1	zsh	:
+pane	config	2	0	:-	1	gustavo@debian:~/repos/config/dotfiles	:/home/gustavo/repos/config/dotfiles	1	zsh	:
+pane	fiveloved	1	1	:*	1	gustavo@debian:~/repos/projects/fiveloved	:/home/gustavo/repos/projects/fiveloved	1	zsh	:
+pane	fiveloved	2	0	:	1	gustavo@debian:~/repos/projects/fiveloved	:/home/gustavo/repos/projects/fiveloved	1	npm	:npm run dev
+pane	fiveloved	3	0	:-	1	gustavo@debian:~/repos/projects/fiveloved	:/home/gustavo/repos/projects/old/fiveloved-old	1	zsh	:
+pane	gmtborges	1	1	:*	1	gustavo@debian:~/repos/projects/gmtborges.com	:/home/gustavo/repos/projects/gmtborges.com	1	zsh	:
+pane	gmtborges	2	0	:-	1	gustavo@debian:~/repos/projects/gmtborges.com	:/home/gustavo/repos/projects/gmtborges.com	1	zsh	:
+pane	notes	1	1	:*	1	gustavo@debian:~/repos/notes/zettelkasten	:/home/gustavo/repos/notes/zettelkasten	1	zsh	:
+pane	notes	2	0	:-	1	gustavo@debian:~/repos/notes/zettelkasten	:/home/gustavo/repos/notes/zettelkasten	1	zsh	:
+pane	oss	1	1	:*	1	gustavo@debian:~/repos/oss	:/home/gustavo/repos/oss	1	zsh	:
+pane	oss	2	0	:-	1	gustavo@debian:~/repos/oss	:/home/gustavo/repos/oss	1	zsh	:
+pane	projects	1	1	:*	1	gustavo@debian:~/repos/projects	:/home/gustavo/repos/projects/instagain	1	zsh	:
+pane	projects	2	0	:	1	gustavo@debian:~/repos/projects	:/home/gustavo/repos/projects/instagain	1	zsh	:
+pane	projects	3	0	:-	1	debian	:/home/gustavo/repos/projects/old/instagain-old	1	zsh	:
+pane	study	1	1	:*	1	gustavo@debian:~/exercism/elixir	:/home/gustavo/exercism/elixir	1	zsh	:
+pane	study	2	0	:-	1	gustavo@debian:~/repos/study	:/home/gustavo/repos/study	1	zsh	:
+pane	tipspace	1	1	:*	1	gustavo@debian:~/repos/tipspace/infra	:/home/gustavo/repos/tipspace/infra/ecs	1	zsh	:
+pane	tipspace	2	0	:-	1	gustavo@debian:~/repos/tipspace/orbi-backend	:/home/gustavo/repos/tipspace/orbi-backend	1	zsh	:
+pane	tipspace	3	0	:	1	gustavo@debian:~/repos/tipspace	:/home/gustavo/repos/tipspace	1	zsh	:
+pane	tmp	1	1	:*	1	gustavo@debian:~/tmp	:/home/gustavo/tmp	1	zsh	:
+pane	tmp	2	0	:-	1	gustavo@debian:~/Downloads	:/home/gustavo/Downloads	1	zsh	:
+window	celestiny	1	:zsh	1	:*	c7de,231x47,0,0,1	:
+window	celestiny	2	:zsh	0	:-	bbdf,212x44,0,0,2	:
+window	config	1	:zsh	1	:*	c7e0,231x47,0,0,3	:
+window	config	2	:zsh	0	:-	bbe1,212x44,0,0,4	:
+window	fiveloved	1	:zsh	1	:*	c7e2,231x47,0,0,5	:
+window	fiveloved	2	:npm	0	:	bbe3,212x44,0,0,6	:
+window	fiveloved	3	:zsh	0	:-	bbe4,212x44,0,0,7	:
+window	gmtborges	1	:zsh	1	:*	c7e5,231x47,0,0,8	:
+window	gmtborges	2	:zsh	0	:-	bbe6,212x44,0,0,9	:
+window	notes	1	:zsh	1	:*	641f,231x47,0,0,10	:
+window	notes	2	:zsh	0	:-	5e20,212x44,0,0,11	:
+window	oss	1	:zsh	1	:*	5e21,212x44,0,0,12	:
+window	oss	2	:zsh	0	:-	5e22,212x44,0,0,13	:
+window	projects	1	:zsh	1	:*	6423,231x47,0,0,14	:
+window	projects	2	:zsh	0	:	5e24,212x44,0,0,15	:
+window	projects	3	:zsh	0	:-	e422,231x47,0,0,23	:
+window	study	1	:zsh	1	:*	5e25,212x44,0,0,16	:
+window	study	2	:zsh	0	:-	5e26,212x44,0,0,17	:
+window	tipspace	1	:zsh	1	:*	6427,231x47,0,0,18	:
+window	tipspace	2	:zsh	0	:-	6428,231x47,0,0,19	:
+window	tipspace	3	:zsh	0	:	de1f,212x44,0,0,20	:
+window	tmp	1	:zsh	1	:*	de20,212x44,0,0,21	:
+window	tmp	2	:zsh	0	:-	de21,212x44,0,0,22	:
+state	notes	config
