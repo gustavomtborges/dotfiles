@@ -80,9 +80,6 @@ return {
 					},
 				},
 				capabilities = capabilities,
-				on_attach = function(client)
-					client.resolved_capabilities.documentFormatingProvider = false
-				end,
 			})
 
 			lspconfig.tailwindcss.setup({
