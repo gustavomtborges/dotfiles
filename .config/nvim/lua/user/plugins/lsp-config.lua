@@ -66,6 +66,7 @@ return {
 			})
 
 			lspconfig.html.setup({
+				filetypes = { "html", "svg" },
 				capabilities = capabilities,
 				on_attach = function(client)
 					client.resolved_capabilities.documentFormatingProvider = false
