@@ -59,6 +59,16 @@ return {
 				},
 			})
 		end,
-		vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>"),
+
+		-- vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>"),
+	},
+	{
+		"echasnovski/mini.nvim",
+		version = "*",
+		config = function()
+			require("mini.files").setup()
+		end,
+
+		vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>"),
 	},
 }
