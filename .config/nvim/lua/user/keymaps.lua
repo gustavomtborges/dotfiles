@@ -30,8 +30,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<M-p>", '"_dP')
 
 -- Buffers
-vim.keymap.set("n", "<C-h>", ":bprev<CR>")
-vim.keymap.set("n", "<C-l>", ":bnext<CR>")
+vim.keymap.set("n", "<C-n>", ":bprev<CR>")
+vim.keymap.set("n", "<C-t>", ":bnext<CR>")
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
 
 -- Spilts

@@ -73,7 +73,7 @@ return {
 			}),
 			formatting = {
 				format = lspkind.cmp_format({
-					mode = "symbol",
+					mode = "symbol_text",
 					symbol_map = {
 						Unit = "",
 						Codeium = "",

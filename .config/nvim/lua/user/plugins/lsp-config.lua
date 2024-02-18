@@ -67,7 +67,6 @@ return {
 
 			lspconfig.html.setup({
 				filetypes = { "html", "svg" },
-				capabilities = capabilities,
 				on_attach = function(client)
 					client.resolved_capabilities.documentFormatingProvider = false
 				end,
@@ -98,7 +97,6 @@ return {
 			lspconfig.astro.setup({})
 
 			lspconfig.marksman.setup({
-				capabilities = capabilities,
 				on_attach = function(client)
 					client.resolved_capabilities.documentFormatingProvider = false
 				end,
@@ -132,6 +130,10 @@ return {
 			-- 		vim.lsp.buf.format()
 			-- 	end,
 			-- })
+
+			vim.keymap.set("n", "<space>d", vim.diagnostic.open_float)
+			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -201,7 +203,6 @@ return {
 
 			null_ls.setup({
 				sources = {
-					null_ls.builtins.completion.spell,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.prettierd.with({
 						env = {

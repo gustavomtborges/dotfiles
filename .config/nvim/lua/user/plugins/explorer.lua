@@ -66,7 +66,11 @@ return {
 		"echasnovski/mini.nvim",
 		version = "*",
 		config = function()
-			require("mini.files").setup()
+			require("mini.files").setup({
+				mappings = {
+					synchronize = "<C-s>",
+				},
+			})
 		end,
 
 		vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>"),
