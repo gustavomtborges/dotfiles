@@ -93,8 +93,8 @@ return {
 			})
 
 			lspconfig.yamlls.setup({})
-			lspconfig.prismals.setup({})
 			lspconfig.astro.setup({})
+			lspconfig.svelte.setup({})
 
 			lspconfig.marksman.setup({
 				on_attach = function(client)
@@ -225,6 +225,7 @@ return {
 							"txt",
 							"config",
 							"astro",
+							"svelte",
 						},
 					}),
 					null_ls.builtins.formatting.terraform_fmt,
