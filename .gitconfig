@@ -1,6 +1,6 @@
 [user]
 	name = G M T Borges
-	email = contact@gmtborges.com
+	email = gustavo@gmtborges.com
 [alias]
 	st = status
 	lg = log  --graph --pretty=format:'%C(auto)%h -%C(auto)%d %s %C(green)(%cr) %C(blue)<%an>' --abbrev-commit --date=relative

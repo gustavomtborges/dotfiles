@@ -35,7 +35,7 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, { pattern = { "*" }, command = "normal zx", })
 
 vim.opt.spelllang = { "pt_br", "en_us" }
-vim.opt.spell = false
+vim.opt.spell = true
 
 local signs = {
 	Error = " ",
