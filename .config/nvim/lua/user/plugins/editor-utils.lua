@@ -48,6 +48,7 @@ return {
 				"astro",
 				"elixir",
 				"heex",
+				"svelte",
 			},
 		},
 	},

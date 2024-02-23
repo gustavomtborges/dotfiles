@@ -1,19 +1,26 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	dependencies = { "nvim-treesitter/playground" },
+	dependencies = {
+		"nvim-treesitter/playground",
+		"windwp/nvim-ts-autotag",
+		{ "andymass/vim-matchup", commit = "9328ac6cda667ef2f5f65bb84756d55e7af602b2" },
+	},
 	build = ":TSUpdate",
 	config = function()
+		vim.g.matchup_matchparen_enabled = 0
+
 		local treesitter = require("nvim-treesitter.configs")
 
 		treesitter.setup({
 			-- A list of parser names, or "all" (the five listed parsers should always be installed)
 			ensure_installed = {
+				"c",
 				"lua",
+				"vim",
 				"elixir",
 				"eex",
 				"heex",
 				"astro",
-				"vim",
 				"vimdoc",
 				"query",
 				"javascript",
@@ -23,6 +30,15 @@ return {
 				"json",
 				"markdown",
 				"svelte",
+			},
+
+			autotag = {
+				enable = true,
+			},
+
+			matchup = {
+				enable = true, -- mandatory, false will disable the whole extension
+				disable = {}, -- optional, list of language that will be disabled
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
