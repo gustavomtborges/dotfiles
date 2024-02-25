@@ -13,6 +13,7 @@ return {
 	},
 	{
 		"Mofiqul/vscode.nvim",
+		lazy = false,
 		config = function()
 			require("vscode").setup({
 				transparent = true,
@@ -23,7 +24,6 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
-		priority = 1000,
 		config = function()
 			require("tokyonight").setup({
 				style = "night",
@@ -56,7 +56,6 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
 				transparent_background = true,
@@ -65,7 +64,6 @@ return {
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
 		config = true,
 		opts = {
 			bold = false,

@@ -144,3 +144,6 @@ function save-dotfiles () {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 autoload -U compinit && compinit
+
+# Turso
+export PATH="/home/gustavo/.turso:$PATH"

@@ -16,7 +16,7 @@ return {
 	{
 		"Exafunction/codeium.nvim",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
+			{ "nvim-lua/plenary.nvim", branch = "master" },
 			"hrsh7th/nvim-cmp",
 		},
 		config = function()
