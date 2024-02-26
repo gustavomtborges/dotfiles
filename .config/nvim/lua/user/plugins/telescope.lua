@@ -51,7 +51,7 @@ return {
 		end)
 
 		vim.keymap.set("n", "<leader>ff", function()
-			builtin.find_files({ previewer = false, hidden = true })
+			builtin.find_files({ previewer = false, hidden = true, no_ignore = true })
 		end)
 
 		vim.keymap.set("n", "<leader>fg", function()
