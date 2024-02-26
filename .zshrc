@@ -117,6 +117,7 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 alias vim=nvim
 alias v=nvim
 alias icat="kitty +kitten icat"
+alias ssh="kitty +kitten ssh"
 
 function branchdel () {
  git branch --merged | egrep -v "master|dev|main" | xargs git branch -d 
