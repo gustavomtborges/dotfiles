@@ -162,7 +162,7 @@ return {
 					-- end, opts)
 					-- vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
 					vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts)
-					vim.keymap.set({ "n", "v" }, "<leader>s", vim.lsp.buf.code_action, opts)
+					vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 					-- vim.keymap.set("n", "gr", vim.lsp.buf.references, opts) // replaced with telescope
 					vim.keymap.set("n", "<leader>cf", function()
 						vim.lsp.buf.format({ async = true })
