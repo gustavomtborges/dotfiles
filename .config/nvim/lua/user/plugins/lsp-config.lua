@@ -95,12 +95,9 @@ return {
 
 			lspconfig.yamlls.setup({})
 			lspconfig.astro.setup({})
-			lspconfig.svelte.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.svelte.setup({})
 
 			lspconfig.marksman.setup({
-				capabilities = capabilities,
 				on_attach = function(client)
 					client.resolved_capabilities.documentFormatingProvider = false
 				end,
