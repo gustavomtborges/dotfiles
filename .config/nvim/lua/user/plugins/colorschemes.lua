@@ -47,9 +47,9 @@ return {
 				code_style = {
 					comments = "none",
 				},
-				colors = {
-					bg3 = "#4D5563",
-				},
+				-- colors = {
+				-- 	bg3 = "#4D5563",
+				-- },
 			})
 		end,
 	},
