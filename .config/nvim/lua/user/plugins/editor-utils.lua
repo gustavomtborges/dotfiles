@@ -38,21 +38,6 @@ return {
 		opts = {}, -- this is equalent to setup({}) function
 	},
 	{
-		"windwp/nvim-ts-autotag",
-		opts = {
-			filetypes = {
-				"html",
-				"xml",
-				"markdown",
-				"mdx",
-				"astro",
-				"elixir",
-				"heex",
-				"svelte",
-			},
-		},
-	},
-	{
 		"numToStr/Comment.nvim",
 		opts = {
 			-- add any options here
