@@ -83,15 +83,7 @@ return {
 				capabilities = capabilities,
 			})
 
-			lspconfig.tailwindcss.setup({
-				init_options = {
-					userLanguages = {
-						elixir = "html-eex",
-						eelixir = "html-eex",
-						heex = "html-eex",
-					},
-				},
-			})
+			lspconfig.tailwindcss.setup({})
 
 			lspconfig.yamlls.setup({})
 			lspconfig.astro.setup({})
@@ -193,9 +185,9 @@ return {
 						callback = function()
 							vim.lsp.buf.format({
 								bufnr = bufnr,
-								-- filter = function(c)
-								-- 	return c.name == "null-ls"
-								-- end,
+								filter = function(c)
+									return c.name == "null-ls"
+								end,
 							})
 						end,
 					})
