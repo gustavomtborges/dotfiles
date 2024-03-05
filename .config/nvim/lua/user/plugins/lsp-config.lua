@@ -85,19 +85,29 @@ return {
 
 			lspconfig.tailwindcss.setup({})
 
-			lspconfig.yamlls.setup({})
-			lspconfig.astro.setup({})
-			lspconfig.svelte.setup({})
+			lspconfig.yamlls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.astro.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.svelte.setup({
+				capabilities = capabilities,
+			})
 
 			lspconfig.marksman.setup({
+				capabilities = capabilities,
 				on_attach = function(client)
 					client.resolved_capabilities.documentFormatingProvider = false
 				end,
 			})
 
-			lspconfig.ansiblels.setup({})
+			lspconfig.ansiblels.setup({
+				capabilities = capabilities,
+			})
 
 			lspconfig.terraformls.setup({
+				capabilities = capabilities,
 				filetypes = { "terraform", "tf", "terraformvars", "tfvars" },
 			})
 

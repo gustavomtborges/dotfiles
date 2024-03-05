@@ -1,6 +1,6 @@
 Host instagain
-  Hostname 35.237.207.76
-  User gcloud
+  Hostname 18.191.236.191
+  User admin
 
 Host caninos
   Hostname 192.168.1.10
@@ -9,12 +9,10 @@ Host caninos
 Host db.qa.tipspace
   Hostname 10.0.134.78
   User ec2-user
-  IdentityFile staging-ohio-key
 
 Host bucardo
   Hostname 10.10.8.192
   User ec2-user
-  IdentityFile prod-sp-key
 
 Host *
   IdentityAgent ~/.1password/agent.sock
