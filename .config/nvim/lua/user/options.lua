@@ -26,7 +26,7 @@ vim.opt.signcolumn = "yes"
 
 --vim.opt.clipboard = "unnamed" -- Copy and paste with OS clipboard
 vim.opt.cursorline = true -- Highlight the current line
-vim.opt.colorcolumn = "100" -- Show column ruler
+vim.opt.colorcolumn = "80" -- Show column ruler
 vim.opt.wrap = false -- Don't wrap lines
 
 vim.opt.foldlevel = 20
