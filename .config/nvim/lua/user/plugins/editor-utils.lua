@@ -4,7 +4,9 @@ return {
 		event = "VeryLazy",
 		opts = {},
 		config = function()
-			require("lsp_signature").setup()
+			require("lsp_signature").setup({
+				hint_prefix = "⮡ ",
+			})
 		end,
 	},
 	{
