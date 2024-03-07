@@ -84,6 +84,7 @@ plugins=(
 	asdf
   aws
   terraform
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -1,5 +1,13 @@
 return {
 	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		opts = {},
+		config = function()
+			require("lsp_signature").setup()
+		end,
+	},
+	{
 		"github/copilot.vim",
 		config = function()
 			vim.keymap.set("n", "<leader>tc", ":Copilot enable<CR>")

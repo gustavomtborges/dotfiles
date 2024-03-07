@@ -45,7 +45,9 @@ return {
 			require("onedark").setup({
 				transparent = true,
 				code_style = {
-					comments = "none",
+					comments = "italic",
+					keywords = "italic",
+					functions = "none",
 				},
 				-- colors = {
 				-- 	bg3 = "#4D5563",
