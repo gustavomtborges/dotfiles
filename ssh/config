@@ -1,3 +1,7 @@
+Host selenium
+  Hostname 18.220.113.151
+  User admin
+
 Host instagain
   Hostname 18.191.236.191
   User admin

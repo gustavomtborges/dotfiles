@@ -7,6 +7,10 @@ return {
 			require("github-theme").setup({
 				options = {
 					transparent = true,
+					styles = {
+						comments = "italic",
+						keywords = "italic",
+					},
 				},
 			})
 		end,
@@ -29,8 +33,8 @@ return {
 				style = "night",
 				transparent = true,
 				styles = {
-					comments = "none",
-					keywords = "none",
+					comments = "italic",
+					keywords = "italic",
 					sidebars = "transparent",
 					floats = "transparent",
 				},

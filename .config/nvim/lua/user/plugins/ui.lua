@@ -133,45 +133,45 @@ return {
 			vim.keymap.set("n", "<leader>s", "<cmd>AerialToggle!<CR>")
 		end,
 	},
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		config = function()
-			local github_dark_dimmed = {
-				"github_dark_dimmed",
-			}
-			local tokyonight_day = {
-				"tokyonight_day",
-			}
-			local solarized_light = {
-				"solarized_light",
-			}
-			local github_light = {
-				"github_light",
-			}
-			local hooks = require("ibl.hooks")
-			-- create the highlight groups in the highlight setup hook, so they are reset
-			-- every time the colorscheme changes
-			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-				vim.api.nvim_set_hl(0, "github_dark_dimmed", { fg = "#31363B" })
-				vim.api.nvim_set_hl(0, "github_light", { fg = "#E1E2E4" })
-				vim.api.nvim_set_hl(0, "tokyonight_day", { fg = "#D1D3E6" })
-				vim.api.nvim_set_hl(0, "solarized_light", { fg = "#EEE8D5" })
-				vim.api.nvim_set_hl(0, "solarized_light", { fg = "#EEE8D5" })
-			end)
-			require("ibl").setup({
-				scope = {
-					enabled = false,
-				},
-				indent = {
-					-- highlight = github_light,
-				},
-				exclude = {
-					filetypes = { "dashboard", "sql", "dbout" },
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	main = "ibl",
+	-- 	config = function()
+	-- 		local github_dark_dimmed = {
+	-- 			"github_dark_dimmed",
+	-- 		}
+	-- 		local tokyonight_day = {
+	-- 			"tokyonight_day",
+	-- 		}
+	-- 		local solarized_light = {
+	-- 			"solarized_light",
+	-- 		}
+	-- 		local github_light = {
+	-- 			"github_light",
+	-- 		}
+	-- 		local hooks = require("ibl.hooks")
+	-- 		-- create the highlight groups in the highlight setup hook, so they are reset
+	-- 		-- every time the colorscheme changes
+	-- 		hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+	-- 			vim.api.nvim_set_hl(0, "github_dark_dimmed", { fg = "#31363B" })
+	-- 			vim.api.nvim_set_hl(0, "github_light", { fg = "#E1E2E4" })
+	-- 			vim.api.nvim_set_hl(0, "tokyonight_day", { fg = "#D1D3E6" })
+	-- 			vim.api.nvim_set_hl(0, "solarized_light", { fg = "#EEE8D5" })
+	-- 			vim.api.nvim_set_hl(0, "solarized_light", { fg = "#EEE8D5" })
+	-- 		end)
+	-- 		require("ibl").setup({
+	-- 			scope = {
+	-- 				enabled = false,
+	-- 			},
+	-- 			indent = {
+	-- 				-- highlight = github_light,
+	-- 			},
+	-- 			exclude = {
+	-- 				filetypes = { "dashboard", "sql", "dbout" },
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 	{
 		"NvChad/nvim-colorizer.lua",
 		event = { "BufReadPre", "BufNewFile" },
