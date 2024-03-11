@@ -9,7 +9,7 @@ return {
 					transparent = true,
 					styles = {
 						comments = "italic",
-						keywords = "italic",
+						keywords = "italic,bold",
 					},
 				},
 			})

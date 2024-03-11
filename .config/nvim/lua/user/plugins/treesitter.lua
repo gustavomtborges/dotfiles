@@ -34,6 +34,7 @@ return {
 
 			autotag = {
 				enable = true,
+				enable_rename = true,
 			},
 
 			matchup = {
