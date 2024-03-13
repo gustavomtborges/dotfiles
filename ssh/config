@@ -3,8 +3,8 @@ Host selenium
   User admin
 
 Host instagain
-  Hostname 52.15.51.77
-  User admin
+  Hostname 35.233.223.249
+  User gcloud
 
 Host caninos
   Hostname 192.168.1.10
