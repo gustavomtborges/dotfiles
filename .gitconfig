@@ -45,3 +45,6 @@
 	defaultBranch = main
 [fetch]
 	prune = true
+
+[includeIf "gitdir:~/repos/saas/"]
+  path = .gitconfig.saas

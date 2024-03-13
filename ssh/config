@@ -3,7 +3,7 @@ Host selenium
   User admin
 
 Host instagain
-  Hostname 18.222.77.232
+  Hostname 52.15.51.77
   User admin
 
 Host caninos
@@ -17,6 +17,12 @@ Host db.qa.tipspace
 Host bucardo
   Hostname 10.10.8.192
   User ec2-user
+
+Host saasgit
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/matt_ed25519.pub
+  IdentitiesOnly yes
 
 Host *
   IdentityAgent ~/.1password/agent.sock

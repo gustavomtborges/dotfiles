@@ -157,3 +157,10 @@ autoload -U compinit && compinit
 
 # Turso
 export PATH="/home/gustavo/.turso:$PATH"
+
+# bun completions
+[ -s "/home/gustavo/.oh-my-zsh/completions/_bun" ] && source "/home/gustavo/.oh-my-zsh/completions/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

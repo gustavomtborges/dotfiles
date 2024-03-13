@@ -8,8 +8,8 @@ return {
 				options = {
 					transparent = true,
 					styles = {
-						comments = "italic",
-						keywords = "italic,bold",
+						comments = "NONE",
+						keywords = "bold",
 					},
 				},
 			})
@@ -33,8 +33,8 @@ return {
 				style = "night",
 				transparent = true,
 				styles = {
-					comments = "italic",
-					keywords = "italic",
+					comments = "NONE",
+					keywords = "bold",
 					sidebars = "transparent",
 					floats = "transparent",
 				},
@@ -49,8 +49,8 @@ return {
 			require("onedark").setup({
 				transparent = true,
 				code_style = {
-					comments = "italic",
-					keywords = "italic",
+					comments = "NONE",
+					keywords = "bold",
 					functions = "none",
 				},
 				-- colors = {

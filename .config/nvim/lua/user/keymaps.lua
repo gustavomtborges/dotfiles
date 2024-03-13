@@ -33,6 +33,7 @@ vim.keymap.set("x", "<M-p>", '"_dP')
 vim.keymap.set("n", "<C-n>", ":bprev<CR>")
 vim.keymap.set("n", "<C-t>", ":bnext<CR>")
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
+vim.keymap.set("n", "<leader>bk", ":bd!<CR>")
 
 -- Spilts
 vim.keymap.set("n", "<M-h>", "<C-w><C-h>")
