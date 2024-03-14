@@ -14,10 +14,6 @@ Host db.qa.tipspace
   Hostname 10.0.134.78
   User ec2-user
 
-Host bucardo
-  Hostname 10.10.8.192
-  User ec2-user
-
 Host saasgit
   HostName github.com
   User git
