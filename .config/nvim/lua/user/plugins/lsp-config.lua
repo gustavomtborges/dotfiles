@@ -216,16 +216,22 @@ return {
 			null_ls.setup({
 				sources = {
 					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.formatting.prettierd.with({
-						env = {
-							PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/.prettierrc"),
-						},
+					null_ls.builtins.formatting.prettier.with({
 						extra_filetypes = {
 							"astro",
 							"svelte",
 							"telekasten",
 						},
 					}),
+					-- null_ls.builtins.formatting.prettierd.with({
+					-- 	env = {
+					-- 		PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/.prettierrc"),
+					-- 	},
+					-- 	extra_filetypes = {
+					-- 		"astro",
+					-- 		"svelte",
+					-- 	},
+					-- }),
 					null_ls.builtins.formatting.terraform_fmt,
 					null_ls.builtins.formatting.sql_formatter,
 				},
