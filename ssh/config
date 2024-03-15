@@ -5,6 +5,8 @@ Host selenium
 Host instagain
   Hostname 35.233.223.249
   User gcloud
+  IdentityFile ~/.ssh/gcloud.pub
+  IdentitiesOnly yes
 
 Host caninos
   Hostname 192.168.1.10

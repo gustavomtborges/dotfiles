@@ -133,7 +133,9 @@ return {
 			-- 	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 			-- })
 
-			-- lspconfig.gopls.setup({})
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
 			-- lspconfig.omnisharp.setup({})
 
 			-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
