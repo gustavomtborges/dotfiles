@@ -17,23 +17,23 @@ return {
 				return registered
 			end
 
-			local function list_registered_formatters(filetype)
-				local method = require("null-ls").methods.FORMATTING
-				local registered_providers = list_registered_providers_names(filetype)
-				return registered_providers[method] or {}
-			end
-
-			local function list_registered_linters(filetype)
-				local method = require("null-ls").methods.DIAGNOSTICS
-				local registered_providers = list_registered_providers_names(filetype)
-				return registered_providers[method] or {}
-			end
-
-			local function list_registered_hovers(filetype)
-				local method = require("null-ls").methods.HOVER
-				local registered_providers = list_registered_providers_names(filetype)
-				return registered_providers[method] or {}
-			end
+			-- local function list_registered_formatters(filetype)
+			-- 	local method = require("null-ls").methods.FORMATTING
+			-- 	local registered_providers = list_registered_providers_names(filetype)
+			-- 	return registered_providers[method] or {}
+			-- end
+			--
+			-- local function list_registered_linters(filetype)
+			-- 	local method = require("null-ls").methods.DIAGNOSTICS
+			-- 	local registered_providers = list_registered_providers_names(filetype)
+			-- 	return registered_providers[method] or {}
+			-- end
+			--
+			-- local function list_registered_hovers(filetype)
+			-- 	local method = require("null-ls").methods.HOVER
+			-- 	local registered_providers = list_registered_providers_names(filetype)
+			-- 	return registered_providers[method] or {}
+			-- end
 
 			local function lsp_client(msg)
 				msg = msg or ""
@@ -56,12 +56,12 @@ return {
 				end
 
 				-- add formatter
-				local supported_formatters = list_registered_formatters(buf_ft)
-				vim.list_extend(buf_client_names, supported_formatters)
+				-- local supported_formatters = list_registered_formatters(buf_ft)
+				-- vim.list_extend(buf_client_names, supported_formatters)
 
 				-- add linter
-				local supported_linters = list_registered_linters(buf_ft)
-				vim.list_extend(buf_client_names, supported_linters)
+				-- local supported_linters = list_registered_linters(buf_ft)
+				-- vim.list_extend(buf_client_names, supported_linters)
 
 				-- add hover
 				-- local supported_hovers = list_registered_hovers(buf_ft)

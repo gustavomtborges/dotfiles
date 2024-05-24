@@ -5,8 +5,7 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"b0o/schemastore.nvim",
-			"nvimtools/none-ls.nvim",
-			"sqls-server/sqls.vim",
+			"nanotee/sqls.nvim",
 		},
 		config = function()
 			require("mason").setup()
@@ -150,19 +149,6 @@ return {
 				filetypes = { "terraform", "tf", "terraformvars", "tfvars" },
 			})
 
-			-- lspconfig.dockerls.setup({})
-			-- lspconfig.docker_compose_language_service.setup({
-			-- 	root_dir = lspconfig.util.root_pattern("docker-compose.yml", "docker-compose.yaml"),
-			-- })
-
-			-- lspconfig.elixirls.setup({
-			-- 	cmd = { vim.fn.expand("~/.config/elixir_ls/language_server.sh") },
-			-- })
-			--
-			-- lspconfig.angularls.setup({
-			-- 	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-			-- })
-
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
@@ -173,21 +159,10 @@ return {
 			vim.filetype.add({ extension = { templ = "templ" } })
 
 			lspconfig.sqls.setup({
-				capabilities = capabilities,
 				on_attach = function(client, bufnr)
 					require("sqls").on_attach(client, bufnr) -- require sqls.nvim
 				end,
 			})
-
-			-- lspconfig.golangci_lint_ls.setup({})
-			-- lspconfig.omnisharp.setup({})
-
-			-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-			-- 	pattern = { "*.tf", "*.tfvars" },
-			-- 	callback = function()
-			-- 		vim.lsp.buf.format()
-			-- 	end,
-			-- })
 
 			vim.keymap.set("n", "<space>d", vim.diagnostic.open_float)
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
@@ -299,27 +274,6 @@ return {
 			})
 
 			vim.treesitter.language.register("json", "tpl")
-		end,
-	},
-	{
-		"elixir-tools/elixir-tools.nvim",
-		version = "*",
-		event = { "BufReadPre", "BufNewFile" },
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			local elixirls = require("elixir.elixirls")
-			require("elixir").setup({
-				nextls = { enable = false },
-				credo = { enable = false },
-				elixirls = {
-					settings = elixirls.settings({
-						dialyzerEnabled = false,
-						enableTestLenses = false,
-					}),
-				},
-			})
 		end,
 	},
 }
