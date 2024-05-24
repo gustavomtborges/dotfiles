@@ -17,12 +17,13 @@ return {
 						["@string.special.url"] = { style = "NONE" },
 						["@operator"] = { fg = "palette.fg.on_emphasis" },
 						["@keyword.templ"] = { fg = "syntax.tag" },
+						["@variable.member.lua"] = { fg = "palette.fg.default" },
 					},
 				},
 				options = {
 					transparent = true,
 					darken = {
-						floats = true,
+						floats = false,
 					},
 					styles = {
 						comments = "NONE",
