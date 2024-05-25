@@ -35,6 +35,10 @@ vim.keymap.set("n", "<C-t>", ":bnext<CR>")
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
 vim.keymap.set("n", "<leader>bk", ":bd!<CR>")
 
+-- Tabs
+vim.keymap.set("n", "<leader>nt", ":tabNext<CR>")
+vim.keymap.set("n", "<leader>nn", ":tabnew<CR>")
+
 -- Spilts
 vim.keymap.set("n", "<M-h>", "<C-w><C-h>")
 vim.keymap.set("n", "<M-l>", "<C-w><C-l>")

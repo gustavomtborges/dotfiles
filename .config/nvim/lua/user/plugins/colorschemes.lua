@@ -6,7 +6,7 @@ return {
 		config = function()
 			require("github-theme").setup({
 				groups = {
-					github_dark_dimmed = {
+					all = {
 						["@type"] = { fg = "palette.fg.default" },
 						["@type.definition"] = { fg = "palette.fg.default" },
 						["@type.builtin"] = { fg = "palette.fg.default" },
@@ -27,7 +27,7 @@ return {
 					},
 					styles = {
 						comments = "NONE",
-						keywords = "bold",
+						keywords = "NONE",
 						constants = "NONE",
 					},
 				},
@@ -55,7 +55,7 @@ return {
 				transparent = true,
 				styles = {
 					comments = "NONE",
-					keywords = "bold",
+					keywords = "NONE",
 					functions = "NONE",
 					sidebars = "transparent",
 					-- floats = "transparent",
@@ -83,7 +83,7 @@ return {
 				transparent = true,
 				code_style = {
 					comments = "NONE",
-					keywords = "bold",
+					keywords = "NONE",
 					functions = "NONE",
 				},
 			})
