@@ -20,30 +20,30 @@ return {
 			})
 		end,
 	},
-	-- {
-	-- 	"github/copilot.vim",
-	-- 	config = function()
-	-- 		vim.keymap.set(
-	-- 			"i",
-	-- 			"<C-TAB>",
-	-- 			"copilot#Accept('<CR>')",
-	-- 			{ noremap = true, silent = true, expr = true, replace_keycodes = false }
-	-- 		)
-	-- 		vim.keymap.set("i", "<C-S-TAB>", "copilot#Next()", { noremap = true, silent = true, expr = true })
-	-- 		vim.g.copilot_no_tab_map = true
-	-- 		vim.g.copilot_enabled = 0
-	-- 	end,
-	-- },
-	-- {
-	-- 	"Exafunction/codeium.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"hrsh7th/nvim-cmp",
-	-- 	},
-	-- 	config = function()
-	-- 		require("codeium").setup({})
-	-- 	end,
-	-- },
+	{
+		"github/copilot.vim",
+		config = function()
+			vim.keymap.set(
+				"i",
+				"<C-TAB>",
+				"copilot#Accept('<CR>')",
+				{ noremap = true, silent = true, expr = true, replace_keycodes = false }
+			)
+			vim.keymap.set("i", "<C-S-TAB>", "copilot#Next()", { noremap = true, silent = true, expr = true })
+			vim.g.copilot_no_tab_map = true
+			vim.g.copilot_enabled = 1
+		end,
+	},
+	{
+		"Exafunction/codeium.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+		end,
+	},
 	{
 		"kylechui/nvim-surround",
 		version = "*", -- Use for stability; omit to use `main` branch for the latest features

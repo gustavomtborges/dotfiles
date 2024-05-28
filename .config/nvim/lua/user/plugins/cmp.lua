@@ -16,7 +16,6 @@ return {
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
 
-		vim.opt.completeopt = "menu,menuone,noselect"
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		local has_words_before = function()
@@ -44,7 +43,7 @@ return {
 				{ name = "buffer" },
 				{ name = "luasnip" },
 				{ name = "path" },
-				{ name = "vim-dadbod-completion" },
+				{ name = "codeium" },
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-d>"] = cmp.mapping.scroll_docs(-4),
@@ -82,13 +81,15 @@ return {
 					mode = "symbol_text",
 					symbol_map = {
 						Unit = "",
+						Codeium = "󰈸",
 					},
 					menu = {
 						nvim_lsp = "[LSP]",
-						nvim_lua = "[Lua]",
+						buffer = "[Buffer]",
 						luasnip = "[Snippet]",
 						path = "[Path]",
-						buffer = "[Buffer]",
+						Codeium = "[AI]",
+						nvim_lua = "[Lua]",
 					},
 				}),
 			},

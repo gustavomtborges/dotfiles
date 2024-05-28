@@ -9,6 +9,6 @@ return {
 		-- 	require("trouble").next({ skip_groups = true, jump = true })
 		-- end)
 
-		vim.keymap.set("n", "<leader>td", ":TroubleToggle<CR>")
+		vim.keymap.set("n", "<leader>tt", ":TroubleToggle<CR>")
 	end,
 }

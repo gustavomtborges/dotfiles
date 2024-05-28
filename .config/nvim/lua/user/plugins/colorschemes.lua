@@ -9,7 +9,6 @@ return {
 					all = {
 						["@type"] = { fg = "palette.fg.default" },
 						["@type.definition"] = { fg = "palette.fg.default" },
-						["@type.builtin"] = { fg = "palette.fg.default" },
 						["@module"] = { fg = "palette.fg.on_emphasis" },
 						["@module.go"] = { fg = "palette.fg.on_emphasis" },
 						["@tag.delimiter"] = { fg = "palette.fg.on_emphasis" },
@@ -18,6 +17,7 @@ return {
 						["@operator"] = { fg = "palette.fg.on_emphasis" },
 						["@keyword.templ"] = { fg = "syntax.tag" },
 						["@variable.member.lua"] = { fg = "palette.fg.default" },
+						["@constructor"] = { fg = "syntax.func" },
 					},
 				},
 				options = {
