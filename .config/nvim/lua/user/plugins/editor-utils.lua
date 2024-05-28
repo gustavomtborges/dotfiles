@@ -31,7 +31,7 @@ return {
 			)
 			vim.keymap.set("i", "<C-S-TAB>", "copilot#Next()", { noremap = true, silent = true, expr = true })
 			vim.g.copilot_no_tab_map = true
-			vim.g.copilot_enabled = 1
+			vim.g.copilot_enabled = 0
 		end,
 	},
 	{
