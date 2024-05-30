@@ -45,5 +45,5 @@
 [fetch]
 	prune = true
 
-[includeIf "gitdir:~/repos/saas/matt"]
+[includeIf "gitdir:~/repos/saas/matt/"]
   path = .gitconfig-matt

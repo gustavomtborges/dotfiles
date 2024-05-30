@@ -187,9 +187,13 @@ return {
 		end,
 	},
 	{
-		"NvChad/nvim-colorizer.lua",
+		"brenoprata10/nvim-highlight-colors",
 		event = { "BufReadPre", "BufNewFile" },
-		config = true,
+		config = function()
+			require("nvim-highlight-colors").setup({
+				enable_tailwind = true,
+			})
+		end,
 	},
 	-- {
 	-- 	"glepnir/dashboard-nvim",

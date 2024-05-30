@@ -62,7 +62,7 @@ return {
 		end)
 
 		-- LSP
-		vim.keymap.set("n", "<leader>fj", function()
+		vim.keymap.set("n", "<leader>cj", function()
 			builtin.lsp_document_symbols()
 		end)
 
