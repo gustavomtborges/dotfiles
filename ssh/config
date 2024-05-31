@@ -1,14 +1,8 @@
 # vim:ft=conf
-Host private-apps
-  Hostname 3.144.174.21
-  User admin
-  IdentityFile ~/.ssh/gmtborges-ec2-key.pub
-  IdentitiesOnly yes
-
 Host gcloud-vm
   Hostname 35.196.116.76
   User gcloud
-  IdentityFile ~/.ssh/gcloud-key
+  IdentityFile ~/.ssh/gcloud-key.pub
   IdentitiesOnly yes
 
 Host caninos
@@ -18,43 +12,61 @@ Host caninos
 Host node1-staging
   User admin
   Hostname 18.188.157.9
+  IdentityFile ~/.ssh/tip-staging.pub
+  IdentitiesOnly yes
 
 Host node2-staging
   User admin
   Hostname 52.15.199.91
+  IdentityFile ~/.ssh/tip-staging.pub
+  IdentitiesOnly yes
 
 Host node3-staging
   User admin
   Hostname 3.146.37.191
+  IdentityFile ~/.ssh/tip-staging.pub
+  IdentitiesOnly yes
 
 Host node1
   User admin
   Hostname 18.231.172.115
+  IdentityFile ~/.ssh/tip-prod.pub
+  IdentitiesOnly yes
 
 Host node2
   User admin
   Hostname 54.233.237.240
+  IdentityFile ~/.ssh/tip-prod.pub
+  IdentitiesOnly yes
 
 Host node3
   User admin
   Hostname 18.231.48.118
+  IdentityFile ~/.ssh/tip-prod.pub
+  IdentitiesOnly yes
 
 Host node4
   User admin
   Hostname 18.230.117.202
+  IdentityFile ~/.ssh/tip-prod.pub
+  IdentitiesOnly yes
 
 Host node5
   User admin
   Hostname 54.94.102.66
+  IdentityFile ~/.ssh/tip-prod.pub
+  IdentitiesOnly yes
 
 Host node6
   User admin
   Hostname 18.228.9.154
+  IdentityFile ~/.ssh/tip-prod.pub
+  IdentitiesOnly yes
 
 Host saasgit
   HostName github.com
   User git
-  IdentityFile ~/.ssh/matt_ed25519
+  IdentityFile ~/.ssh/matt_ed25519.pub
   IdentitiesOnly yes
 
 Host *

@@ -26,8 +26,8 @@ return {
 						floats = false,
 					},
 					styles = {
-						comments = "NONE",
-						keywords = "NONE",
+						comments = "italic",
+						keywords = "bold",
 						constants = "NONE",
 					},
 				},
