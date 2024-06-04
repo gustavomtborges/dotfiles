@@ -115,6 +115,8 @@ return {
 					},
 				},
 			})
+			vim.keymap.set("n", "<leader>bn", ":BufferLineMoveNext<CR>")
+			vim.keymap.set("n", "<leader>bp", ":BufferLineMovePrev<CR>")
 		end,
 	},
 	-- {

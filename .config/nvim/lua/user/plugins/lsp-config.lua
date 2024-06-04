@@ -184,15 +184,8 @@ return {
 					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 					vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 					vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-					-- vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
-					-- vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
-					-- vim.keymap.set("n", "<space>wl", function()
-					--   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-					-- end, opts)
-					-- vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
 					vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts)
 					vim.keymap.set({ "n", "v" }, "<leader>h", vim.lsp.buf.code_action, opts)
-					-- vim.keymap.set("n", "gr", vim.lsp.buf.references, opts) // replaced with telescope
 					vim.keymap.set("n", "<leader>cf", function()
 						vim.lsp.buf.format({ async = true })
 					end, opts)
@@ -213,60 +206,6 @@ return {
 				float = { border = _border },
 			})
 
-			-- local null_ls = require("null-ls")
-			-- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-			--
-			-- local format_on_save = function(client, bufnr)
-			-- 	if client.server_capabilities.documentFormattingProvider then
-			-- 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-			-- 			group = augroup,
-			-- 			buffer = bufnr,
-			-- 			callback = function()
-			-- 				vim.lsp.buf.format({
-			-- 					bufnr = bufnr,
-			-- 					filter = function(c)
-			-- 						return c.name == "null-ls"
-			-- 					end,
-			-- 				})
-			-- 			end,
-			-- 		})
-			-- 	end
-			-- end
-			--
-			-- null_ls.setup({
-			-- 	sources = {
-			-- 		null_ls.builtins.formatting.stylua,
-			-- 		-- null_ls.builtins.formatting.prettier.with({
-			-- 		-- 	condition = function(utils)
-			-- 		-- 		return utils.root_has_file({ ".prettierrc" })
-			-- 		-- 	end,
-			-- 		-- 	extra_filetypes = {
-			-- 		-- 		"astro",
-			-- 		-- 		"svelte",
-			-- 		-- 		"telekasten",
-			-- 		-- 	},
-			-- 		-- 	prefer_local = "node_modules/.bin",
-			-- 		-- }),
-			-- 		null_ls.builtins.formatting.prettierd.with({
-			-- 			env = {
-			-- 				PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/.prettierrc"),
-			-- 			},
-			-- 			extra_filetypes = {
-			-- 				"astro",
-			-- 				"svelte",
-			-- 				"telekasten",
-			-- 			},
-			-- 		}),
-			-- 		null_ls.builtins.formatting.terraform_fmt,
-			-- 		null_ls.builtins.formatting.sql_formatter,
-			-- 		-- null_ls.builtins.formatting.gofumpt,
-			-- 		-- null_ls.builtins.formatting.goimports_reviser,
-			-- 		-- null_ls.builtins.diagnostics.staticcheck,
-			-- 	},
-			-- 	on_attach = format_on_save,
-			-- })
-			--
 			vim.filetype.add({
 				extension = {
 					tpl = "tpl",
