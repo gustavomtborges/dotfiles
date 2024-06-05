@@ -1,14 +1,22 @@
 return {
 	"folke/trouble.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
-	config = function()
-		-- vim.keymap.set("n", "[d", function()
-		-- 	require("trouble").previous({ skip_groups = true, jump = true })
-		-- end)
-		-- vim.keymap.set("n", "]d", function()
-		-- 	require("trouble").next({ skip_groups = true, jump = true })
-		-- end)
-
-		vim.keymap.set("n", "<leader>tt", ":TroubleToggle<CR>")
-	end,
+	opts = {}, -- for default options, refer to the configuration section for custom setup.
+	cmd = "Trouble",
+	keys = {
+		{
+			"<leader>xx",
+			"<cmd>Trouble diagnostics toggle<cr>",
+			desc = "Diagnostics (Trouble)",
+		},
+		{
+			"<leader>xb",
+			"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+			desc = "Buffer Diagnostics (Trouble)",
+		},
+		{
+			"<leader>xQ",
+			"<cmd>Trouble qflist toggle<cr>",
+			desc = "Quickfix List (Trouble)",
+		},
+	},
 }

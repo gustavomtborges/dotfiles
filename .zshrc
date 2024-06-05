@@ -14,6 +14,9 @@ export GPG_TTY=$(tty)
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# Disable homebrew auto update
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
