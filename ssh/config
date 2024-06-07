@@ -29,25 +29,25 @@ Host node3-staging
 
 Host node1
   User admin
-  Hostname 18.231.172.115
+  Hostname 10.10.0.200
   IdentityFile ~/.ssh/tip-prod.pub
   IdentitiesOnly yes
 
 Host node2
   User admin
-  Hostname 54.233.237.240
+  Hostname 10.10.7.165
   IdentityFile ~/.ssh/tip-prod.pub
   IdentitiesOnly yes
 
 Host node3
   User admin
-  Hostname 18.231.48.118
+  Hostname 10.10.7.47
   IdentityFile ~/.ssh/tip-prod.pub
   IdentitiesOnly yes
 
 Host node4
   User admin
-  Hostname 18.230.117.202
+  Hostname 10.10.15.195
   IdentityFile ~/.ssh/tip-prod.pub
   IdentitiesOnly yes
 

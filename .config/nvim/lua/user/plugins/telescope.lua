@@ -31,10 +31,10 @@ return {
 			},
 		})
 		vim.keymap.set("n", "<C-p>", function()
-			builtin.find_files({ previewer = false, hidden = true, no_ignore = true })
+			builtin.find_files({ previewer = false, hidden = true })
 		end)
 		vim.keymap.set("n", "<leader>p", function()
-			builtin.find_files({ previewer = false, hidden = true, no_ignore = true })
+			builtin.find_files({ previewer = false, hidden = true })
 		end)
 
 		vim.keymap.set("n", "<leader>o", function()
