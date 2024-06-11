@@ -26,7 +26,7 @@ return {
 						floats = false,
 					},
 					styles = {
-						comments = "italic",
+						comments = "NONE",
 						keywords = "bold",
 						constants = "NONE",
 					},
@@ -55,7 +55,7 @@ return {
 				transparent = true,
 				styles = {
 					comments = "NONE",
-					keywords = "NONE",
+					keywords = "bold",
 					functions = "NONE",
 					sidebars = "transparent",
 					-- floats = "transparent",
@@ -83,7 +83,7 @@ return {
 				transparent = true,
 				code_style = {
 					comments = "NONE",
-					keywords = "NONE",
+					keywords = "bold",
 					functions = "NONE",
 				},
 			})
@@ -97,7 +97,7 @@ return {
 			italic = {
 				strings = false,
 				emphasis = false,
-				comments = true,
+				comments = false,
 				operators = false,
 				folds = true,
 			},

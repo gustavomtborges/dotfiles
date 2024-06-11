@@ -51,15 +51,9 @@ Host node4
   IdentityFile ~/.ssh/tip-prod.pub
   IdentitiesOnly yes
 
-Host node5
-  User admin
-  Hostname 54.94.102.66
-  IdentityFile ~/.ssh/tip-prod.pub
-  IdentitiesOnly yes
-
 Host node6
   User admin
-  Hostname 18.228.9.154
+  Hostname 10.10.7.50
   IdentityFile ~/.ssh/tip-prod.pub
   IdentitiesOnly yes
 
