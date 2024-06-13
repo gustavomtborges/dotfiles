@@ -27,7 +27,7 @@ return {
 					},
 					styles = {
 						comments = "NONE",
-						keywords = "bold",
+						keywords = "NONE",
 						constants = "NONE",
 					},
 				},
@@ -55,7 +55,7 @@ return {
 				transparent = true,
 				styles = {
 					comments = "NONE",
-					keywords = "bold",
+					keywords = "NONE",
 					functions = "NONE",
 					sidebars = "transparent",
 					-- floats = "transparent",
@@ -83,7 +83,7 @@ return {
 				transparent = true,
 				code_style = {
 					comments = "NONE",
-					keywords = "bold",
+					keywords = "NONE",
 					functions = "NONE",
 				},
 			})
