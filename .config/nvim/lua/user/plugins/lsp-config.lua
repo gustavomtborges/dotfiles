@@ -18,6 +18,7 @@ return {
 					"tsserver",
 					"jsonls",
 					"html",
+					"terraformls",
 				},
 			})
 			local lspconfig = require("lspconfig")
@@ -146,7 +147,6 @@ return {
 
 			lspconfig.terraformls.setup({
 				capabilities = capabilities,
-				filetypes = { "terraform", "tf", "terraformvars", "tfvars" },
 			})
 
 			lspconfig.gopls.setup({

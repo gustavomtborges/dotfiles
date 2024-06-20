@@ -26,8 +26,8 @@ return {
 						floats = false,
 					},
 					styles = {
-						comments = "NONE",
-						keywords = "NONE",
+						comments = "italic",
+						keywords = "bold",
 						constants = "NONE",
 					},
 				},
@@ -54,11 +54,11 @@ return {
 			require("tokyonight").setup({
 				transparent = true,
 				styles = {
-					comments = "NONE",
-					keywords = "NONE",
+					comments = "italic",
+					keywords = "bold",
 					functions = "NONE",
 					sidebars = "transparent",
-					-- floats = "transparent",
+					floats = "transparent",
 				},
 				on_highlights = function(hl, c)
 					hl["@module"] = {

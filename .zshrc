@@ -95,6 +95,7 @@ plugins=(
   aws
   terraform
   docker
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
