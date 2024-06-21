@@ -9,7 +9,7 @@
 	co = checkout
   sw = switch
   rs = restore
-  pu = pull
+  pl = pull
   ps = push
 	br = branch
   dd = diff
