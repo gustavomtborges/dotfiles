@@ -82,26 +82,14 @@ return {
 			require("onedark").setup({
 				transparent = true,
 				code_style = {
-					comments = "NONE",
-					keywords = "NONE",
+					comments = "italic",
+					keywords = "bold",
 					functions = "NONE",
+				},
+				highlights = {
+					["@string.special"] = { fg = "@fg" },
 				},
 			})
 		end,
-	},
-	{
-		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		config = true,
-		opts = {
-			italic = {
-				strings = false,
-				emphasis = false,
-				comments = false,
-				operators = false,
-				folds = true,
-			},
-			transparent_mode = true,
-		},
 	},
 }
