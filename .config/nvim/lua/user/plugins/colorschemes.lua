@@ -86,6 +86,9 @@ return {
 					keywords = "bold",
 					functions = "NONE",
 				},
+				colors = {
+					fg = "#4A4C57",
+				},
 				highlights = {
 					["@string.special"] = { fg = "@fg" },
 				},

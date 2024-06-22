@@ -11,19 +11,19 @@ Host caninos
 
 Host node1-staging
   User admin
-  Hostname 18.188.157.9
+  Hostname 10.0.1.9
   IdentityFile ~/.ssh/tip-staging.pub
   IdentitiesOnly yes
 
 Host node2-staging
   User admin
-  Hostname 52.15.199.91
+  Hostname 10.0.2.130
   IdentityFile ~/.ssh/tip-staging.pub
   IdentitiesOnly yes
 
 Host node3-staging
   User admin
-  Hostname 3.146.37.191
+  Hostname 10.0.13.142
   IdentityFile ~/.ssh/tip-staging.pub
   IdentitiesOnly yes
 
