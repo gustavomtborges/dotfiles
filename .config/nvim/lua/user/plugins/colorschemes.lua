@@ -6,7 +6,7 @@ return {
 		config = function()
 			require("github-theme").setup({
 				groups = {
-					all = {
+					github_dark = {
 						["@type"] = { fg = "palette.fg.default" },
 						["@type.definition"] = { fg = "palette.fg.default" },
 						["@module"] = { fg = "palette.fg.on_emphasis" },
@@ -18,6 +18,10 @@ return {
 						["@keyword.templ"] = { fg = "syntax.tag" },
 						["@variable.member.lua"] = { fg = "palette.fg.default" },
 						["@constructor"] = { fg = "syntax.func" },
+					},
+					github_light = {
+						["@string"] = { fg = "#494B56" },
+						["@string.special"] = { fg = "#494B56" },
 					},
 				},
 				options = {
