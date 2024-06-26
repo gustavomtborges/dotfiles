@@ -90,11 +90,12 @@ return {
 					keywords = "bold",
 					functions = "NONE",
 				},
-				colors = {
-					fg = "#4A4C57",
-				},
+				-- colors = {
+				-- 	fg = "#4A4C57",
+				-- },
 				highlights = {
 					["@string.special"] = { fg = "@fg" },
+					["@variable"] = { fg = "@fg" },
 				},
 			})
 		end,
