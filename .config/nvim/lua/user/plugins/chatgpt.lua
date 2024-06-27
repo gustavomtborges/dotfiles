@@ -12,5 +12,6 @@ return {
 			api_key_cmd = "gpg --decrypt " .. home .. "/chatgpt-secret.txt.gpg",
 		})
 		vim.keymap.set({ "n", "v" }, "<leader>ct", "<cmd>ChatGPTRun translate<CR>")
+		vim.keymap.set({ "n", "v" }, "<leader>cg", "<cmd>ChatGPTRun grammar_correction<CR>")
 	end,
 }
