@@ -9,6 +9,7 @@
 	co = checkout
   sw = switch
   rs = restore
+  rt = reset
   pl = pull
   ps = push
 	br = branch
