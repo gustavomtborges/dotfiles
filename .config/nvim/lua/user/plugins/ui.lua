@@ -37,7 +37,7 @@ return {
 
 			local function lsp_client(msg)
 				msg = msg or ""
-				local buf_clients = vim.lsp.buf_get_clients()
+				local buf_clients = vim.lsp.get_clients()
 				if next(buf_clients) == nil then
 					if type(msg) == "boolean" or #msg == 0 then
 						return ""
@@ -100,20 +100,22 @@ return {
 	},
 	{
 		"akinsho/bufferline.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("bufferline").setup({
-				highlights = {
-					background = {
-						fg = "#596276",
-					},
-					close_button = {
-						fg = "#596276",
-					},
-					buffer_visible = {
-						fg = "#596276",
-					},
-				},
+				-- highlights = {
+				-- 	background = {
+				-- 		fg = "#596276",
+				-- 	},
+				-- 	close_button = {
+				-- 		fg = "#596276",
+				-- 	},
+				-- 	buffer_visible = {
+				-- 		fg = "#596276",
+				-- 	},
+				-- },
 			})
 			vim.keymap.set("n", "<leader>bn", ":BufferLineMoveNext<CR>")
 			vim.keymap.set("n", "<leader>bp", ":BufferLineMovePrev<CR>")

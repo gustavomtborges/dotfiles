@@ -54,17 +54,3 @@ for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
-
--- Fix folding with treesitter
--- vim.api.nvim_create_autocmd("BufRead", {
--- 	callback = function()
--- 		vim.vim.api.nvim_create_autocmd("BufWinEnter", {
--- 			once = true,
--- 			command = "normal! zx zR",
--- 		})
--- 	end,
--- })
-
---
---
---

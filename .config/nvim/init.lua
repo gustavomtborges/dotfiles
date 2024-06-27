@@ -3,4 +3,4 @@ require("user.keymaps")
 require("user.lazy")
 
 vim.opt.background = "dark"
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme tokyonight")
