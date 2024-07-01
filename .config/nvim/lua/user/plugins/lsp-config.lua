@@ -64,24 +64,15 @@ return {
 					},
 				},
 				capabilities = capabilities,
-				on_attach = function(client)
-					client.resolved_capabilities.documentFormatingProvider = false
-				end,
 			})
 
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
-				on_attach = function(client)
-					client.resolved_capabilities.documentFormatingProvider = false
-				end,
 			})
 
 			lspconfig.html.setup({
 				capabilities = capabilities,
 				filetypes = { "html", "svg", "templ" },
-				on_attach = function(client)
-					client.resolved_capabilities.documentFormatingProvider = false
-				end,
 			})
 
 			lspconfig.jsonls.setup({
@@ -162,6 +153,10 @@ return {
 				on_attach = function(client, bufnr)
 					require("sqls").on_attach(client, bufnr) -- require sqls.nvim
 				end,
+			})
+
+			lspconfig.helm_ls.setup({
+				capabilities = capabilities,
 			})
 
 			vim.keymap.set("n", "<leader>td", vim.diagnostic.open_float)
